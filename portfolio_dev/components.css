@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    height: 5vh;
+}
+
+#home {
+    height: 90vh;
+}
+
+.home {
+    height: 100%;
+}
+
+.profile-img {
+    border-radius: 100%;
+}

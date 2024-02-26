@@ -1,0 +1,31 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.navbar {
+	height: 10vh;
+	position: fixed;
+}
+.gx-icon {
+	height: 40px;
+}
+.bg-darkest {
+	background-color: #101010 !important;
+}
+
+
+.full-height {
+	height: 90vh; /* Set height to 100% of the viewport height */
+}
+.gx-title {
+	width: 60%;
+}
+
+.info-div {
+	text-align: center;
+	color: white;
+}
+.info-div .sub {
+	color: gray;
+}
