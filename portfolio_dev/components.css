@@ -32,6 +32,21 @@ nav {
 }
 
 
+.contact-info {
+	color: white;
+    padding: 50px 0;
+}
+
+.message-me {
+	height: 550px;	
+}
+
+.messaging {
+	border-radius: 20px;
+    color: black;
+}
+
+
 footer {
     color: white;
 }

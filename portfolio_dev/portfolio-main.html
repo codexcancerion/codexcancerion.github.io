@@ -167,32 +167,42 @@
     </section>
     <hr>
 
-    <section id="contact-me">
-        <h1>Contact Me</h1>
-        <ul>
-            <li>Email address: <strong>melbertmarafo2022@gmail.com</strong></li>
-            <li>Phone Number: <strong>0935-135-5782 (TM/GLOBE)</strong></li>
-            <li>Mail: <strong>Fairview Village, Baguio City 2600, Philippines</strong></li>
-        </ul>
 
-        <div>
-            <h3>Send me a quick message</h3>
-        <form>
-            <label for="sender-name">Name</label>
-            <input type="text" id="sender-name" placeholder="Type here..">
-        </form>
-        <form>
-            <label for="sender-email">Email</label>
-            <input type="text" id="sender-email" placeholder="Type here..">
-        </form>
-        <form>
-            <label for="sender-message">Message</label>
-            <input type="text" id="sender-message" placeholder="Type here..">
-        </form>
-        <button class="" onclick="">Send</button>
-        </div>        
+    <section id="contact-me">
+        <div class="flex row justify-content-center w-100 px-5 bg-darkest text-white py-lg-5 p-5">
+            <div class="col contact-info">
+                <div class="title">
+                    <h1>Contact Me</h1>
+                    <ul>
+                        <li>Email address: <strong>melbertmarafo2022@gmail.com</strong></li>
+                        <li>Phone Number: <strong>0935-135-5782 (TM/GLOBE)</strong></li>
+                        <li>Mail: <strong>Fairview Village, Baguio City 2600, Philippines</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col message-me justify-content-center p-lg-5">
+                <div class="messaging bg-light w-60 p-lg-5 p-4">
+                    <h2>Send me a quick message</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" class="form-control" id="full-name" placeholder="Enter Full Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <input type="text" class="form-control" id="message" placeholder="Your message here">
+                        </div>
+                        <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
-    <hr>
 
     <section id="">
         <div class="container-fluid full-height  d-flex justify-content-center ">
@@ -205,7 +215,7 @@
     </section>
 
 
-    <section id="navigation">
+    <section id="footer">
         <nav class="navbar navbar-expand-lg navbar-dark bg-darkest w-100 sticky-top">
             <a class="navbar-brand px-3 d-flex" href="../index.html">
                 <img src="../img/codex-assets/icons/icon-wh.png" class="gx-icon" alt="icon">
