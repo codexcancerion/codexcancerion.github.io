@@ -1,0 +1,54 @@
+.fan {
+	
+}
+.fan-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.fan-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: arial;	
+	color: white;
+}
+.fan img {
+	height: 50vh;
+	border: 1vh solid aqua;
+	padding: 50px;
+	border-radius: 50%;
+	animation: fananim linear;
+	animation-iteration-count: infinite;
+	margin: 50px;
+}
+.fan button {
+	cursor: pointer;
+	width: 100px;
+	height: 100px;
+	padding: 30px 30px;
+	margin: 20px 20px;
+	font-size: 25px;
+	font-weight: 550;
+	border: none;
+	background-color: silver;
+	border-radius: 50%;
+	transition: 0.1s;
+}	
+.fan button:active{
+	box-shadow: 0 10px 10px black;
+	transform: scale(0.95);
+}	
+.fan-main button:nth-last-child(5){
+	background-color: rgb(0, 255, 106);
+}	
+.fan-main button:nth-last-child(4){
+	background-color: rgb(243, 49, 0);
+}	
+
+@keyframes fananim{
+	100%
+	{
+		transform: rotate(360deg);
+	}	
+}	
