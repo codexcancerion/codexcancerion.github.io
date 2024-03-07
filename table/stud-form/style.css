@@ -7,31 +7,32 @@ body {
 
 .form-section {
 	margin: 10vh;
-	display: grid;
+	display: flex;
 	justify-content: center;
 }
 .form-main {
 	width: 80vw;
 	background-color: white;
-	padding: 3vh 3vw;
+	padding: 2vh 2vw;
 	border-radius: 5px;
 	box-shadow: 0 0 20px grey;
 }
 .form-title {
 	text-align: left;
 }
-.form-main .input-holder {
-	padding: 1vw 5vh;
-	margin: 10px 0;
-	width: 100%;
+.form-main p {
+	margin: 0;
 }
 .form-main .input-holder-wrapped {
 	margin: 15px 0;
 	display: flex;
 	width: 100%;
+	flex-flow: row;
 }
 .form-main .input-holder-wrapped .input-holder {
-	padding: auto;
+	padding: 1vh 0vw;
+	padding-right: 30px;
+	margin: 40px auto;
 	height: 5vh;
 	border: 0;
 	margin-top: 10px;
@@ -39,37 +40,68 @@ body {
 }
 .form-main .input-holder input, select{
 	padding: 1vh;
-	width: 100%;
+	width: 100% !important;
+	height: 40px;
+	border: 1px solid rgb(225, 225, 225, 1.0);
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: rgb(245, 245, 245, 1.0);
+	transition: .1s;
+}
+.form-main .input-holder select{
+	height: 54px !important;
+	width: 102% !important;
+	cursor: pointer;
+}
+.form-main .input-holder input:hover, select:hover{
+	box-shadow: 0 0 10px rgb(200, 200, 200, 1.0);
+}
+
+.form-main .button-holder {
+	padding: 3vh 0vw;
+	padding-right: 1%;
+	margin: 20px auto;
 	height: 5vh;
 	border: 0;
 	margin-top: 10px;
 	border-radius: 5px;
-	background-color: rgb(245, 245, 245, 1.0);
+	display: grid;
 }
-.form-main .input-holder button{
+.form-main .button-holder button{
 	padding: 15px;
-	width: 10vw;
+	width: 150px;
+	height: 50px;
 	border: none;
-	background-color: #F71735;
-	color: white;
+	background-color: rgb(200, 200, 200, 1.0);
+	color: #011627;
+	font-weight: bolder;
 	border-radius: 5px;
 	cursor: pointer;
+	margin-left: auto;
+	align-self: end;
 }
-.form-main .input-holder button:hover{
+.form-main .button-holder button:hover{
 	background-color: #F71735;
 	color: white;
-	transition: .5s;
-	box-shadow: 5px black;
+	transition: .3s;
+	box-shadow: 0 0 10px grey;
+}
+
+
+
+.required::after {
+	content: ' *';
+	color: red;
 }
 
 .width-third {
-	width: 33%;
+	width: 33% !important;
 }
 .width-half {
-	width: 50%;
+	width: 50% !important;
 }
 .width-full {
-	width: 100%;
+	width: 100% !important;
 }
 
 .txt-sc-black {
