@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Student Registration</title>
+</head>
+<body>
+	<header>
+		
+	</header>
+
+	<main class="txt-sc-black">
+		<section class="form-section">
+			<form method="POST">
+				<div class="form-main">
+					<h1 class="form-title">New Account Registration</h1>
+					<h3>Student's Information</h3>
+					<p>Please enter required field.</p>
+
+					<div class="input-holder-wrapped">
+						<div class="input-holder width-third">
+							<label for="fname">First Name</label><br>
+							<input type="text" name="fname" id="fname" placeholder="eg. Herbert" required>
+						</div>
+
+						<div class="input-holder width-third">
+							<label for="mname">Middle Name</label><br>
+							<input type="text" name="mname" id="mname" placeholder="eg. Batan">
+						</div>
+
+						<div class="input-holder width-third">
+							<label for="lname">Last Name</label><br>
+							<input type="text" name="lname" id="lname" placeholder="eg. Acoking" required>
+						</div>
+					</div>
+					
+
+					<div class="input-holder-wrapped">
+						<div class="input-holder width-half">
+							<label for="bdate">Date of birth</label><br>
+							<input type="date" name="bdate" id="bdate" placeholder="" required>
+						</div>
+
+						<div class="input-holder width-half">						
+							<label for="gender">Gender</label><br>
+							<select name="gender" required>
+								<option value="male">Male</option>							
+								<option value="female">Female</option>
+								<option value="nonbinary">Non-binary</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="input-holder-wrapped">
+						<div class="input-holder width-half">
+							<label for="email">Email</label><br>
+							<input type="email" name="email" id="email" placeholder="eg. herbert@email.com" required>
+						</div>
+
+						<div class="input-holder width-half">
+							<label for="contact-number">Contact Number</label><br>
+							<input type="email" name="contact-number" id="contact-number" placeholder="09123456789" required>
+						</div>
+					</div>
+					
+
+					<div class="input-holder-wrapped">
+						<div class="input-holder width-full">			
+							<label for="program">Program Applying for:</label><br>
+							<select name="program" required>
+								<option value="bsit">BS Information Technology</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="input-holder-wrapped">
+						<div class="input-holder">				
+							<label for="term">Term Applying for:</label><br>
+							<select name="term" required>
+								<option value="summer">SY 2023-2024 Summer Term</option>	
+								<option value="first-sem">SY 2024-2025 1st Semester</option>
+							</select>
+						</div>
+
+						<div class="input-holder">				
+							<label for="student-status">Applying as:</label><br>
+							<select name="term" required>
+								<option value="new-student">New Student</option>	
+								<option value="old-student">Old Student</option>
+								<option value="transferee">Transferee</option>
+							</select>
+						</div>
+					</div>
+<!-- 
+					<div class="input-holder-wrapped">
+						<div class="input-holder">
+							<label for="password">Password</label><br>
+							<input type="password" name="password" id="password" placeholder="" required>
+						</div>
+					</div>		 -->
+
+					<div class="input-holder-wrapped">
+						<div class="input-holder">
+						<button onclick="">Submit</button>
+					</div>
+					</div>
+					
+					
+				</div>
+			</form>
+		</section>
+	</main>
+
+
+	<footer>
+		
+	</footer>
+</body>
+</html>

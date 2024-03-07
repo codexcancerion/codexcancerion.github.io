@@ -1,0 +1,99 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+	background-color: rgb(240, 240, 240, 1.0);
+}
+
+
+.form-section {
+	margin: 10vh;
+	display: grid;
+	justify-content: center;
+}
+.form-main {
+	width: 80vw;
+	background-color: white;
+	padding: 3vh 3vw;
+	border-radius: 5px;
+	box-shadow: 0 0 20px grey;
+}
+.form-title {
+	text-align: left;
+}
+.form-main .input-holder {
+	padding: 1vw 5vh;
+	margin: 10px 0;
+	width: 100%;
+}
+.form-main .input-holder-wrapped {
+	margin: 15px 0;
+	display: flex;
+	width: 100%;
+}
+.form-main .input-holder-wrapped .input-holder {
+	padding: auto;
+	height: 5vh;
+	border: 0;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+.form-main .input-holder input, select{
+	padding: 1vh;
+	width: 100%;
+	height: 5vh;
+	border: 0;
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: rgb(245, 245, 245, 1.0);
+}
+.form-main .input-holder button{
+	padding: 15px;
+	width: 10vw;
+	border: none;
+	background-color: #F71735;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.form-main .input-holder button:hover{
+	background-color: #F71735;
+	color: white;
+	transition: .5s;
+	box-shadow: 5px black;
+}
+
+.width-third {
+	width: 33%;
+}
+.width-half {
+	width: 50%;
+}
+.width-full {
+	width: 100%;
+}
+
+.txt-sc-black {
+	color: #011627;
+}
+.txt-sc-red {
+	color: #F71735;
+}
+.txt-sc-blue {
+	color: #41EAD4;
+}
+.txt-sc-yellow {
+	color: #FF9F1C;
+}
+
+.bg-sc-black {
+	background-color: #011627;
+}
+.bg-sc-red {
+	background-color: #F71735;
+}
+.bg-sc-blue {
+	background-color: #41EAD4;
+}
+.bg-sc-yellow {
+	background-color: #FF9F1C;
+}
