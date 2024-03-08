@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+   <title>Responsive Regisration Form </title>
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">PERSONAL INFORMATION</span>                    
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input type="text" placeholder="eg. Job" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Middle Name</label>
+                            <input type="text" placeholder="eg. Pong" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="eg. Dady" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Extension Name</label>
+                            <input type="text" placeholder="eg. Jr." required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Sex</label>
+                            <select required>
+                                <option disabled selected>Select sex</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="details address">
+                    <span class="title">PERMANENT ADDRESS</span>                    
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>House/Lot/Bldg. no./Purok</label>
+                            <input type="text" placeholder="eg. 123" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Street/Sitio/Subdvision</label>
+                            <input type="text" placeholder="eg. Kalye St." required>
+                        </div>
+                        <div class="input-field">
+                            <label>Barangay</label>
+                            <input type="text" placeholder="eg. Sesame" required>
+                        </div>
+                        <div class="input-field">
+                            <label>City/Municipality</label>
+                            <input type="text" placeholder="eg. Baguio City" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Province</label>
+                            <input type="text" placeholder="eg. Benguet" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Region</label>
+                            <input type="text" placeholder="eg. CAR" required>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="details personal">
+                    <span class="title">BIRTH INFORMATION</span>                    
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Date of birth</label>
+                            <input type="date" placeholder="" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Place of Birth (City/Municipality)</label>
+                            <input type="text" placeholder="eg. Baguio City" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Place of Birth (Province)</label>
+                            <input type="text" placeholder="eg. Benguet" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mother's Maiden Name</label>
+                            <input type="text" placeholder="eg. Pong Mamy" required>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="details personal">
+                    <span class="title">CONTACT INFORMATION</span>                    
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="text" placeholder="eg. 09123456789" required>
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="">
+                            <span>Do you own the mobile number?</span><br>
+                            <input type="radio" id="yes" name="fav_language" value="yes">
+                            <label for="yes">Yes</label>
+                            <br>
+                            <input type="radio" id="no" name="fav_language" value="no">
+                            <label for="no">No</label>
+                        </div>
+                        <span>If no, Full name and relationship with the owner of number:</span><br>
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="eg. Kuya Job">
+                        </div>
+                        <div class="input-field">
+                            <label>Relationship</label>
+                            <input type="text" placeholder="eg. Brother">
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="details personal">
+                    <span class="title">HIGHEST EDUCATIONAL ATTAINMENT</span>   
+                    <div class="fields">
+                        <div class="input-field">                            
+                            <select required>
+                                <option disabled selected>Select highest educational attainment</option>
+                                <option>Pre-school</option>
+                                <option>Elementary</option>
+                                <option>High School (non K-12)</option>
+                                <option>Junior High School (K-12)</option>
+                                <option>Senior High School (K-12)</option>
+                                <option>College</option>
+                                <option>Post-graduate</option>
+                                <option>Vocational</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                        <span>If no, Full name and relationship with the owner of number:</span><br>
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="eg. Kuya Job">
+                        </div>
+                        <div class="input-field">
+                            <label>Relationship</label>
+                            <input type="text" placeholder="eg. Brother">
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="details personal">
+                    <span class="title">CIVIL STATUS</span>                    
+                    <div class="fields">
+                        <div class="">
+                            <input type="radio" id="single" name="fav_language" value="single">
+                            <label for="single">Single</label><br>
+                            <input type="radio" id="married" name="fav_language" value="married">
+                            <label for="married">Married</label><br>
+                            <input type="radio" id="widow" name="fav_language" value="widow">
+                            <label for="widow">Widow</label><br>
+                            <input type="radio" id="separated" name="fav_language" value="separated">
+                            <label for="separated">Legally Separated</label><br>
+                        </div>
+                        <div class="input-field">
+                        </div>
+                    <span class="">Name of spouse of married:</span>                    
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input type="text" placeholder="eg. " >
+                        </div>
+                        <div class="input-field">
+                            <label>Middle Name</label>
+                            <input type="text" placeholder="eg. " >
+                        </div>
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="eg. ">
+                        </div>
+                        <div class="input-field">
+                            <label>Extension Name</label>
+                            <input type="text" placeholder="eg. ">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">PROOF OF IDENTITY</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>ID Type</label>
+                            <input type="text" placeholder="Enter ID type" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>ID Number</label>
+                            <input type="number" placeholder="Enter ID number" required>
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Address Type</label>
+                            <input type="text" placeholder="Permanent or Temporary" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nationality</label>
+                            <input type="text" placeholder="Enter nationality" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text" placeholder="Enter your state" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text" placeholder="Enter your district" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Block Number</label>
+                            <input type="number" placeholder="Enter block number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ward Number</label>
+                            <input type="number" placeholder="Enter ward number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details family">
+                    <span class="title">Family Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Father Name</label>
+                            <input type="text" placeholder="Enter father name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother Name</label>
+                            <input type="text" placeholder="Enter mother name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Grandfather</label>
+                            <input type="text" placeholder="Enter grandfther name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Spouse Name</label>
+                            <input type="text" placeholder="Enter spouse name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Father in Law</label>
+                            <input type="text" placeholder="Father in law name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mother in Law</label>
+                            <input type="text" placeholder="Mother in law name" required>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
