@@ -1,0 +1,72 @@
+body {
+	font-family: arial;
+	margin: 0;
+}
+
+
+.form-section {
+	margin: 10vh;
+	display: grid;
+	justify-content: center;
+}
+.form-main {
+	background-color: rgb(240, 240, 240, 1.0);
+	padding: 5vh 3vw;
+	border-radius: 10px;
+}
+.form-title {
+	text-align: center;
+}
+.form-main .input-holder {
+	padding: 1vw 5vh;
+}
+
+.form-main .input-holder input{
+	padding: 1vh;
+	width: 40vw;
+	height: 5vh;
+	border: 0;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+.form-main .input-holder button{
+	padding: 15px;
+	width: 40vw;
+	border: none;
+	background-color: #F71735;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.form-main .input-holder button:hover{
+	background-color: #F71735;
+	color: white;
+	transition: .5s;
+	box-shadow: 5px black;
+}
+
+.txt-sc-black {
+	color: #011627;
+}
+.txt-sc-red {
+	color: #F71735;
+}
+.txt-sc-blue {
+	color: #41EAD4;
+}
+.txt-sc-yellow {
+	color: #FF9F1C;
+}
+
+.bg-sc-black {
+	background-color: #011627;
+}
+.bg-sc-red {
+	background-color: #F71735;
+}
+.bg-sc-blue {
+	background-color: #41EAD4;
+}
+.bg-sc-yellow {
+	background-color: #FF9F1C;
+}

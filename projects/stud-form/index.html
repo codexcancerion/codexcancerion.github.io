@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Student Registration</title>
+</head>
+<body>
+	<header>
+		
+	</header>
+
+	<main class="txt-sc-black">
+		<section class="form-section">
+			<form method="POST">
+				<div class="form-main">
+					<h1 class="form-title">New Account Registration</h1>
+					<h3>Student's Information</h3>
+					<p>Please enter required field.</p>
+
+					<div class="input-holder-wrapped">
+						<div class="input-holder width-third">
+							<label for="fname" class="required">First Name</label><br>
+							<input type="text" name="fname" id="fname" placeholder="eg. Juan" required>
+						</div>
+
+						<div class="input-holder width-third">
+							<label for="mname">Middle Name</label><br>
+							<input type="text" name="mname" id="mname" placeholder="eg. De La">
+						</div>
+
+						<div class="input-holder width-third">
+							<label for="lname" class="required">Last Name</label><br>
+							<input type="text" name="lname" id="lname" placeholder="eg. Cruz" required>
+						</div>
+					</div>
+					
+
+					<div class="input-holder-wrapped">
+						<div class="input-holder width-half">
+							<label for="bdate" class="required">Date of birth</label><br>
+							<input type="date" name="bdate" id="bdate" placeholder="" required>
+						</div>
+
+						<div class="input-holder width-half">						
+							<label for="gender" class="required">Gender</label><br>
+							<select name="gender" required>
+								<option value="male">Male</option>							
+								<option value="female">Female</option>
+								<option value="nonbinary">Non-binary</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="input-holder-wrapped">
+						<div class="input-holder width-half">
+							<label for="email" class="required">Email</label><br>
+							<input type="email" name="email" id="email" placeholder="eg. herbert@email.com" required>
+						</div>
+
+						<div class="input-holder width-half">
+							<label for="contact-number" class="required">Contact Number</label><br>
+							<input type="text" name="contact-number" id="contact-number" placeholder="eg. 09123456789" required>
+						</div>
+					</div>
+					
+
+					<div class="input-holder-wrapped">
+						<div class="width-full input-holder ">			
+							<label for="program" class="required">Program Applying for:</label><br>
+							<select name="program" required>
+								<option value="AB THEO">Bachelor of Arts in Theology</option>
+								<option value="AT-NC II">Automotive Servicing NC II</option>
+								<option value="BA ENG">Bachelor of Arts in English Language</option>
+								<option value="BEED">Bachelor of Elementary Education</option>
+								<option value="BS PSYCH">Bachelor of Science in Psychology</option>
+								<option value="BSA">Bachelor of Science in Accountancy</option>
+								<option value="BSBA-FINANCIAL MANAGEMENT">Bachelor of Science in Business Administration Major in Financial Management</option>
+								<option value="BSBA-MARKETING MANAGEMENT">Bachelor of Science in Business Administration Major in Marketing Management</option>
+								<option value="BSCRIM">Bachelor of Science in Criminology</option>
+								<option value="BSED-ENGLISH">Bachelor of Secondary Education Major in English</option>
+								<option value="BSED-FILIPINO">Bachelor of Secondary Education Major in Filipino</option>
+								<option value="BSED-MATHEMATICS">Bachelor of Secondary Education Major in Mathematics</option>
+								<option value="BSED-SCIENCE">Bachelor of Secondary Education Major in Science</option>
+								<option value="BSHM">Bachelor of Science in Hospitality Management</option>
+								<option value="BSISM">Bachelor of Science in Industrial Security Management</option>
+								<option value="BSIT-NETWORK TECHNOLOGY">Bachelor of Science in Information Technology with Specialization in Network Technology</option>
+								<option value="BSIT-WEB AND MOBILE APPLICATION DEVELOPMENT">Bachelor of Science in Information Technology with Specialization in Web and Mobile Application Development</option>
+								<option value="BSOA">Bachelor of Science in Office Administration</option>
+								<option value="BSSW">Bachelor of Science in Social Work</option>
+								<option value="BTVTED-AUTOMOTIVE TECHNOLOGY">Bachelor of Technical - Vocational Teacher Education Major in Automotive Technology</option>
+								<option value="BTVTED-ELECTRICAL TECHNOLOGY">Bachelor of Technical - Vocational Teacher Education Major in Electrical Technology</option>
+								<option value="EIM-NC II">Electrical Installation and Maintenance NC II</option>
+								<option value="HCS-NC II">Healthcare Services NC II</option>
+								<option value="PROF ED">Professional Education(18 units)</option>
+								<option value="SL">Sign Language</option>
+								<option value="SMAW-NC I">Shielded Metal Arc Welding-NC I</option>
+								<option value="SMAW-NC II">Shielded Metal Arc Welding-NC II</option>
+								<option value="TM">Trainers Methodology</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="input-holder-wrapped">
+						<div class="input-holder width-half">				
+							<label for="term" class="required">Term Applying for:</label><br>
+							<select name="term" required>
+								<option value="summer">SY 2023-2024 Summer Term</option>	
+								<option value="first-sem">SY 2024-2025 1st Semester</option>
+							</select>
+						</div>
+
+						<div class="input-holder width-half">				
+							<label for="student-status" class="required">Applying as:</label><br>
+							<select name="term" required>
+								<option value="new-student">New Student</option>	
+								<option value="old-student">Old Student</option>
+								<option value="transferee">Transferee</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="button-holder">
+						<button onclick="">Submit</button>
+					</div>			
+					
+				</div>
+			</form>
+		</section>
+	</main>
+
+
+	<footer>
+		
+	</footer>
+</body>
+</html>
