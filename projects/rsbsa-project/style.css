@@ -9,7 +9,7 @@
 }
 body{
     min-height: 100vh;
-    background: linear-gradient(to bottom, #ffffff, #28743b);
+    background: linear-gradient(to bottom, white, #D8F3D8, #FFFACD, #ADD8E6, #e9c0fa);
 }
 header {
 }
@@ -109,7 +109,7 @@ main {
     height: 3px;
     width: 100%;
     border-radius: 8px;
-    background-color: rgb(85, 165, 64);
+    background: linear-gradient(to left, #4CAF50, #87CEEB);
 }
 
 
@@ -290,6 +290,55 @@ form .buttons button , .backBtn{
     }
 }
 
+
+
+
+.form-holder .hidden-field {
+    display: none;
+}
+
+
+.farm-parcel-details {
+    padding: 20px;
+    border: #707070 1px solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+.input-with-remove {
+    display: flex;
+    align-items: center;
+    width: 100% !important;
+}
+.input-with-remove input {
+    flex: 1;
+}
+.input-with-remove button {
+    margin-left: 5% !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    background-color: #aaa !important;
+}
+.input-with-remove button:hover {
+    background-color: #4070f4 !important;
+}
+.form-holder .button-holder {
+    display: flex;
+    justify-content: end;
+}
+.form-holder .button-holder button {
+    
+    height: 40px !important;
+    border-radius: 10px !important;
+}
+.form-holder .field-add-button {
+}
+
+
+.width-full {
+    width: 100% !important;    
+}
 .width-half {
     width: 48% !important;    
 }

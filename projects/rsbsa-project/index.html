@@ -159,25 +159,28 @@
                         <div class="fields">
                             <div class="">
                                 <span>Do you own the mobile number?</span><br>
-                                <input type="radio" id="yes" name="fav_language" value="yes">
-                                <label for="yes">Yes</label>
+                                <input type="radio" id="contact-yes" name="contact-owned" value="contact-yes" onclick="toggleContactAdditionalField()">
+                                <label for="contact-yes">Yes</label>
                                 <br>
-                                <input type="radio" id="no" name="fav_language" value="no">
-                                <label for="no">No</label>
+                                <input type="radio" id="contact-no" name="contact-owned" value="contact-no" onclick="toggleContactAdditionalField()">
+                                <label for="contact-no">No</label>
                             </div>                           
                         </div>
 
-                        <label>If no, Full name and relationship with the owner of number:</label>
-                        <div class="fields"> 
-                            <div class="input-field width-half">
-                                <label>Full Name</label>
-                                <input type="text" placeholder="eg. Kuya Job">
-                            </div>
-                            <div class="input-field width-half">
-                                <label>Relationship</label>
-                                <input type="text" placeholder="eg. Brother">
+                        <div id="contact-additional-field" class="hidden-field">
+                            <label>If no, Full name and relationship with the owner of number:</label>
+                            <div class="fields"> 
+                                <div class="input-field width-half">
+                                    <label>Full Name</label>
+                                    <input type="text" placeholder="eg. Kuya Job">
+                                </div>
+                                <div class="input-field width-half">
+                                    <label>Relationship</label>
+                                    <input type="text" placeholder="eg. Brother">
+                                </div>
                             </div>
                         </div>
+                        
                     </div>
                     <br>
 
@@ -208,36 +211,38 @@
                         <div class="fields">
                             <div class="input-field width-half">                                
                                 <label for="" class="required">Civil Status</label>
-                                <select required>
-                                    <option disabled selected>Select civil status</option>
-                                    <option>Single</option>
-                                    <option>Married</option>
-                                    <option>Widow/er</option>
-                                    <option>Legally Separated</option>
+                                <select id="civil-status" onchange="toggleSpouseDetails()">
+                                    <option value="" disabled selected>Select civil status</option>
+                                    <option value="single">Single</option>
+                                    <option value="married">Married</option>
+                                    <option value="widow">Widow/er</option>
+                                    <option value="separated">Legally Separated</option>
                                 </select>
                             </div>
                         </div>
-
-                        <label class="">Name of spouse of married:</label>                    
-                        <div class="fields">
-                            <div class="input-field">
-                                <label>First Name</label>
-                                <input type="text" placeholder="eg. " >
+                    
+                        <div class="hidden-field" id="spouseDetails">
+                            <label class="">Name of spouse:</label>                    
+                            <div class="fields">
+                                <div class="input-field">
+                                    <label>First Name</label>
+                                    <input type="text" placeholder="eg. ">
+                                </div>
+                                <div class="input-field">
+                                    <label>Middle Name</label>
+                                    <input type="text" placeholder="eg. ">
+                                </div>
+                                <div class="input-field">
+                                    <label>Last Name</label>
+                                    <input type="text" placeholder="eg. ">
+                                </div>
+                                <div class="input-field">
+                                    <label>Extension Name</label>
+                                    <input type="text" placeholder="eg. ">
+                                </div>
                             </div>
-                            <div class="input-field">
-                                <label>Middle Name</label>
-                                <input type="text" placeholder="eg. " >
-                            </div>
-                            <div class="input-field">
-                                <label>Last Name</label>
-                                <input type="text" placeholder="eg. ">
-                            </div>
-                            <div class="input-field">
-                                <label>Extension Name</label>
-                                <input type="text" placeholder="eg. ">
-                            </div>
-                        </div>
-                    </div>
+                        </div>                        
+                    </div>                    
                     <br>
 
 
@@ -258,22 +263,24 @@
                         <div class="fields">
                             <div class="">
                                 <span>Part of Indigenous Cultural Community (ICC / Indigenous Peoples (IP))?</span><br>
-                                <input type="radio" id="yes" name="fav_language" value="yes">
+                                <input type="radio" id="yes" name="icc-ip" value="yes" onchange="toggleIccIpName()">
                                 <label for="yes">Yes</label>
                                 <br>
-                                <input type="radio" id="no" name="fav_language" value="no">
+                                <input type="radio" id="no" name="icc-ip" value="no" onchange="toggleIccIpName()">
                                 <label for="no">No</label>
                             </div>                           
                         </div>
-
-                        <label>If yes, indicate name of ICC/IP:</label>
-                        <div class="fields"> 
-                            <div class="input-field width-half">
-                                <label>Name of ICC/IP</label>
-                                <input type="text" placeholder="eg. White Negrito">
+                    
+                        <div class="hidden-field" id="icc-ip-name" style="display: none;">
+                            <label>If yes, indicate name of ICC/IP:</label>
+                            <div class="fields"> 
+                                <div class="input-field width-half">
+                                    <label>Name of ICC/IP</label>
+                                    <input type="text" placeholder="eg. White Negrito">
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div>        
                     <br>
 
 
@@ -312,25 +319,20 @@
                     <div class="details personal">
                         <span class="title">MEMBERSHIP IN FARMER'S or IRRIGATORS ASSOCIATION/COOPERATIVE/ORGANIZATION</span>  
                         <label>Indicate names of FCA/IA/Organization:</label>
-                        <div class="fields"> 
-                            <div class="input-field width-half">
-                                <label>1</label>
-                                <input type="text" placeholder="eg.">
+                        <div id="association-fields">
+                            <div class="fields"> 
+                                <div class="input-field width-full">
+                                    <label>1</label>
+                                    <div class="input-with-remove">
+                                        <input type="text" placeholder="eg.">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="fields"> 
-                            <div class="input-field width-half">
-                                <label>2</label>
-                                <input type="text" placeholder="eg.">
-                            </div>
+                        <div class="button-holder">
+                            <button class="field-add-button" type="button" onclick="addAssociationField()">Add Field</button>
                         </div>
-                        <div class="fields"> 
-                            <div class="input-field width-half">
-                                <label>3</label>
-                                <input type="text" placeholder="eg.">
-                            </div>
-                        </div>
-                    </div>
+                    </div>                                        
                     <br>
 
                     <div class="details ID">
@@ -428,52 +430,54 @@
             </div>            
 
             <form action="#">
-                <div class="form third">
-                    <div class="details personal">
+                <div class="details" id="details">
+                    <div class="farm-parcel-details" id="farm-parcel-details">
                         <span class="title">FARM PARCEL DESCRIPTION</span> <br>                   
                         
                         <label for="">Farm Location</label>
-                        <div class="fields">
-                            <div class="input-field">
-                                <label class="required">Barangay</label>
-                                <input type="text" placeholder="eg. Pico" required>
-                            </div>
-                            <div class="input-field">
-                                <label class="required">Municipality</label>
-                                <input type="text" placeholder="eg. La Trinidad" required>
-                            </div>
-                            <div class="input-field">
-                                <label class="required">Province</label>
-                                <input type="text" placeholder="eg. Benguet" required>
+                        <div id="farm-location-fields">
+                            <div class="fields"> 
+                                <div class="input-field">
+                                    <label class="required">Barangay</label>
+                                    <input type="text" placeholder="eg. Pico" required>
+                                </div>
+                                <div class="input-field">
+                                    <label class="required">Municipality</label>
+                                    <input type="text" placeholder="eg. La Trinidad" required>
+                                </div>
+                                <div class="input-field">
+                                    <label class="required">Province</label>
+                                    <input type="text" placeholder="eg. Benguet" required>
+                                </div>
                             </div>
                         </div>
-
+                    
                         <div class="fields">
                             <div class="input-field width-half">
                                 <label class="required">Total Parcel Area</label>
                                 <input type="text" placeholder="eg. " required>
                             </div>
                         </div>
-
+                    
                         <div class="fields">
                             <div class="">
                                 <span class="required">With Ancestral Domain (AD)?</span><br>
-                                <input type="radio" id="yes" name="fav_language" value="yes">
-                                <label for="yes">Yes</label>
+                                <input type="radio" id="ad_yes" name="ad" value="yes">
+                                <label for="ad_yes">Yes</label>
                                 <br>
-                                <input type="radio" id="no" name="fav_language" value="no">
-                                <label for="no">No</label>
+                                <input type="radio" id="ad_no" name="ad" value="no">
+                                <label for="ad_no">No</label>
                             </div>      
                             <div class="">
                                 <span class="required">Agrarian Reform Beneficiary (ARB)?</span><br>
-                                <input type="radio" id="yes" name="fav_language" value="yes">
-                                <label for="yes">Yes</label>
+                                <input type="radio" id="arb_yes" name="arb" value="yes">
+                                <label for="arb_yes">Yes</label>
                                 <br>
-                                <input type="radio" id="no" name="fav_language" value="no">
-                                <label for="no">No</label>
+                                <input type="radio" id="arb_no" name="arb" value="no">
+                                <label for="arb_no">No</label>
                             </div>                       
                         </div>
-
+                    
                         <div class="fields">
                             <div class="input-field width-half">
                                 <label class="required">Submitted Proof of Land Ownership/Farmer Agreement</label>
@@ -506,97 +510,9 @@
                                 </select>
                             </div>
                         </div>
-
+                    
                         <label class="">Name of Land Owner:</label>                    
-                        <div class="fields">
-                            <div class="input-field">
-                                <label>First Name</label>
-                                <input type="text" placeholder="eg. " >
-                            </div>
-                            <div class="input-field">
-                                <label>Middle Name</label>
-                                <input type="text" placeholder="eg. " >
-                            </div>
-                            <div class="input-field">
-                                <label>Last Name</label>
-                                <input type="text" placeholder="eg. ">
-                            </div>
-                            <div class="input-field width-half">
-                                <label>Extension Name</label>
-                                <input type="text" placeholder="eg. ">
-                            </div>
-                            <div class="input-field width-half">
-                                <label>RSBSA Number</label>
-                                <input type="number" placeholder="eg. ">
-                            </div>
-                        </div>
-                    </div>
-                    <br>                   
-
-
-                    <div class="details personal">
-                        <span class="title">CROP INFORMATION</span> <br>
-
-                        <label class="">Cropping Schedule</label>   
-                        <div class="fields">
-                            <div class="input-field width-half">   
-                                <label for="" class="required">Planting Month</label>                        
-                                <input type="text" placeholder="eg. March" required>
-                            </div>
-                            <div class="input-field width-half">   
-                                <label for="" class="required">Estimated Harvesting Month</label>                        
-                                <input type="text" placeholder="eg. June" required>
-                            </div>
-                        </div>
-
-                        <label class="">Commodity/Crop</label>   
-                        <div class="fields">
-                            <div class="input-field ">   
-                                <label for="" class="required">Crop Name</label>                        
-                                <input type="text" placeholder="eg. Cabbage" required>
-                            </div>
-                            <div class="input-field ">   
-                                <label for="" class="">Size/Planted Area (HA)</label>                        
-                                <input type="text" placeholder="eg. " >
-                            </div>
-                            <div class="input-field ">   
-                                <label for="" class="">Number of Heads/Trees</label>                        
-                                <input type="text" placeholder="eg. " >
-                            </div>
-                        </div>
-
-                        <label class="">Farm Type</label>   
-                        <div class="fields">
-                            <div class="input-field width-half"> 
-                                <label class="required">Type of Farm</label>
-                                <select required>
-                                    <option disabled selected>Select type</option>
-                                    <option>Irrigated</option>
-                                    <option>Rainfed Upland</option>
-                                    <option>Rainfed Lowland</option>
-                                    <option>Urban/Perl-urban</option>
-                                    <option>Not Applicable</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <span class="">Organic Farming?</span><br>
-                        <div class="fields">
-                            <div class="">
-                                <input type="radio" id="yes" name="fav_language" value="yes">
-                                <label for="yes">Yes</label>
-                                <br>
-                                <input type="radio" id="no" name="fav_language" value="no">
-                                <label for="no">No</label>
-                            </div>      
-                        </div>
-                        <br>
-
-
-                        <div class="details personal">
-                            <span class="title">ROTATIONAL TILLER</span> 
-
-                            <label class="">Name of Rotational Tiller:</label>                    
+                        <div id="land-owner-fields">
                             <div class="fields">
                                 <div class="input-field">
                                     <label>First Name</label>
@@ -620,15 +536,112 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
 
-                    
-                        <button class="nextBtn">
-                            <span class="btnText">Next</span>
-                            <i class="uil uil-navigator"></i>
-                        </button>                
-                    </div>
+                        <div class="details personal">
+                            <span class="title">CROP INFORMATION</span> <br>
+    
+                            <label class="">Cropping Schedule</label>   
+                            <div class="fields">
+                                <div class="input-field width-half">   
+                                    <label for="" class="required">Planting Month</label>                        
+                                    <input type="text" placeholder="eg. March" required>
+                                </div>
+                                <div class="input-field width-half">   
+                                    <label for="" class="required">Estimated Harvesting Month</label>                        
+                                    <input type="text" placeholder="eg. June" required>
+                                </div>
+                            </div>
+    
+                            <label class="">Commodity/Crop</label>   
+                            <div class="fields">
+                                <div class="input-field ">   
+                                    <label for="" class="required">Crop Name</label>                        
+                                    <input type="text" placeholder="eg. Cabbage" required>
+                                </div>
+                                <div class="input-field ">   
+                                    <label for="" class="">Size/Planted Area (HA)</label>                        
+                                    <input type="text" placeholder="eg. " >
+                                </div>
+                                <div class="input-field ">   
+                                    <label for="" class="">Number of Heads/Trees</label>                        
+                                    <input type="text" placeholder="eg. " >
+                                </div>
+                            </div>
+    
+                            <label class="">Farm Type</label>   
+                            <div class="fields">
+                                <div class="input-field width-half"> 
+                                    <label class="required">Type of Farm</label>
+                                    <select required>
+                                        <option disabled selected>Select type</option>
+                                        <option>Irrigated</option>
+                                        <option>Rainfed Upland</option>
+                                        <option>Rainfed Lowland</option>
+                                        <option>Urban/Perl-urban</option>
+                                        <option>Not Applicable</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <span class="">Organic Farming?</span><br>
+                            <div class="fields">
+                                <div class="">
+                                    <input type="radio" id="yes" name="fav_language" value="yes">
+                                    <label for="yes">Yes</label>
+                                    <br>
+                                    <input type="radio" id="no" name="fav_language" value="no">
+                                    <label for="no">No</label>
+                                </div>      
+                            </div>
+                            <br>
+    
+    
+                            <div class="details personal">
+                                <span class="title">ROTATIONAL TILLER</span> 
+    
+                                <label class="">Name of Rotational Tiller:</label>                    
+                                <div class="fields">
+                                    <div class="input-field">
+                                        <label>First Name</label>
+                                        <input type="text" placeholder="eg. " >
+                                    </div>
+                                    <div class="input-field">
+                                        <label>Middle Name</label>
+                                        <input type="text" placeholder="eg. " >
+                                    </div>
+                                    <div class="input-field">
+                                        <label>Last Name</label>
+                                        <input type="text" placeholder="eg. ">
+                                    </div>
+                                    <div class="input-field width-half">
+                                        <label>Extension Name</label>
+                                        <input type="text" placeholder="eg. ">
+                                    </div>
+                                    <div class="input-field width-half">
+                                        <label>RSBSA Number</label>
+                                        <input type="number" placeholder="eg. ">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-holder input-with-remove">
+                            <button class="" type="button" onclick="removeField(this)">Remove</button>
+                        </div>
+                        <div class="button-holder">
+                            <button class="" type="button" onclick="">Save</button>    
+                        </div>
+                    </div>   
                 </div>
+                
+                
+                <div class="button-holder">
+                    <button class="field-add-button" type="button" onclick="addFarmParcelDescription()">Add Field</button>
+                </div>
+                
+                <button class="nextBtn">
+                    <span class="btnText">Next</span>
+                    <i class="uil uil-navigator"></i>
+                </button>
             </form>
         </div>
 
