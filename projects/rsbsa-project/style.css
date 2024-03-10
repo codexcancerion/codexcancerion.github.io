@@ -1,29 +1,72 @@
-/* ===== Google Font Import - Poppins ===== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 body{
     min-height: 100vh;
-    background: linear-gradient(to bottom, #81f19d, #28743b);
+    background: linear-gradient(to bottom, #ffffff, #28743b);
 }
 header {
-    text-align: center;
-    margin: 5vh 0;
 }
+header .top-header {
+    width: 100%;
+    height: 60vh;
+    /* background-image: url('img/feet-bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat; */
+    background-position-y: 60%;
+    /* background-color: #248232; */
+    padding: 5vh 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .top-header .img-portion {
+    overflow: hidden;
+}
+header .top-header .img-portion img {
+    height: 100%;
+    overflow: hidden;
+}
+.title-gradient {
+    background: linear-gradient(to right, #4CAF50, #87CEEB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    margin-top: 0;
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 0;
 }
-.container{
+.form-holder{
     /* position: ; */
     max-width: 900px;
-    width: 100%;
+    width: 90%;
     border-radius: 6px;
     margin: 0 15px 10vh 15px;
     background-color: #fff;
@@ -32,20 +75,24 @@ main {
 }
 
 
-.container .container-header {
+.form-holder .form-holder-header {
     height: 100px;
     width: 100%;
     background-image: url('img/tactor.png');
     background-size: 100px;
     background-repeat: no-repeat;
     background-position-x: 90%;
-    background-position-y: 90%;
+    background-position-y: 70%;
     display: flex;
     align-content: flex-end;
     flex-wrap: wrap;
     padding: 0 20px;
 }
-.container h2{
+.form-holder a {
+    
+    text-decoration-line: none !important;
+}
+.form-holder h2{
     position: relative;
     font-size: 20px;
     font-weight: 600;
@@ -54,7 +101,7 @@ main {
     font-weight: bolder;
     
 }
-.container h2::before{
+.form-holder h2::before{
     content: "";
     position: absolute;
     left: 0;
@@ -66,7 +113,7 @@ main {
 }
 
 
-.container form{
+.form-holder form{
     position: relative;
     margin-top: 16px;
     min-height: 490px;
@@ -74,12 +121,12 @@ main {
     overflow: hidden;
     padding: 10px 30px;
 }
-.container form .form{
+.form-holder form .form{
     position: relative;
     background-color: #fff;
     transition: 0.3s ease;
 }
-.container form .form.second{
+.form-holder form .form.second{
     opacity: 0;
     pointer-events: none;
     transform: translateX(100%);
@@ -96,7 +143,7 @@ form.secActive .form.first{
 }
 
 
-.container form .title{
+.form-holder form .title{
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
@@ -105,7 +152,7 @@ form.secActive .form.first{
     color: #333;
     position: relative;
 }
-.container .details span.title::before{
+.form-holder .details span.title::before{
     content: "";
     position: absolute;
     left: 0;
@@ -118,7 +165,7 @@ form.secActive .form.first{
 }
 
 
-.container form .fields{
+.form-holder form .fields{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -141,15 +188,16 @@ form .fields .input-field{
     font-size: 14px;
     font-weight: 400;
     color: #333;
-    border-radius: 5px;
-    border: 1px solid #aaa;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    border: none;
     padding: 0 15px;
     height: 42px;
     margin: 8px 0;
 }
-.input-field input :focus,
-.input-field select:focus{
-    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+.input-field input:hover,
+.input-field select:hover{
+    box-shadow: 0 0 6px rgba(0,0,0,0.13);
 }
 .input-field select,
 .input-field input[type="date"]{
@@ -186,7 +234,7 @@ form .fields .check-field{
 }
 
 
-.container form button, .backBtn{
+.form-holder form button, .backBtn{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,7 +250,7 @@ form .fields .check-field{
     transition: all 0.3s linear;
     cursor: pointer;
 }
-.container form .btnText{
+.form-holder form .btnText{
     font-size: 14px;
     font-weight: 400;
 }
@@ -225,10 +273,10 @@ form .buttons button , .backBtn{
 }
 
 @media (max-width: 750px) {
-    .container form{
+    .form-holder form{
         overflow-y: scroll;
     }
-    .container form::-webkit-scrollbar{
+    .form-holder form::-webkit-scrollbar{
        display: none;
     }
     form .fields .input-field{
