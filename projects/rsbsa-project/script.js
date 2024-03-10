@@ -119,7 +119,7 @@ function addFarmParcelDescription() {
     </div>
 
     <div class="fields">
-        <div class="input-field width-half">
+        <div class="input-field width-full">
             <label class="required">Total Parcel Area</label>
             <input type="text" placeholder="eg. " required>
         </div>
@@ -145,7 +145,7 @@ function addFarmParcelDescription() {
     </div>
 
     <div class="fields">
-        <div class="input-field width-half">
+        <div class="input-field width-full">
             <label class="required">Submitted Proof of Land Ownership/Farmer Agreement</label>
             <select required>
                 <option disabled selected>Select document type</option>
@@ -165,7 +165,7 @@ function addFarmParcelDescription() {
             </select>
         </div>
         
-        <div class="input-field width-half">
+        <div class="input-field width-full">
             <label class="required">Type of Ownership/Tenure</label>
             <select required>
                 <option disabled selected>Select type</option>
@@ -192,11 +192,11 @@ function addFarmParcelDescription() {
                 <label>Last Name</label>
                 <input type="text" placeholder="eg. ">
             </div>
-            <div class="input-field width-half">
+            <div class="input-field width-full">
                 <label>Extension Name</label>
                 <input type="text" placeholder="eg. ">
             </div>
-            <div class="input-field width-half">
+            <div class="input-field width-full">
                 <label>RSBSA Number</label>
                 <input type="number" placeholder="eg. ">
             </div>
@@ -208,11 +208,11 @@ function addFarmParcelDescription() {
     
                             <label class="">Cropping Schedule</label>   
                             <div class="fields">
-                                <div class="input-field width-half">   
+                                <div class="input-field width-full">   
                                     <label for="" class="required">Planting Month</label>                        
                                     <input type="text" placeholder="eg. March" required>
                                 </div>
-                                <div class="input-field width-half">   
+                                <div class="input-field width-full">   
                                     <label for="" class="required">Estimated Harvesting Month</label>                        
                                     <input type="text" placeholder="eg. June" required>
                                 </div>
@@ -236,7 +236,7 @@ function addFarmParcelDescription() {
     
                             <label class="">Farm Type</label>   
                             <div class="fields">
-                                <div class="input-field width-half"> 
+                                <div class="input-field width-full"> 
                                     <label class="required">Type of Farm</label>
                                     <select required>
                                         <option disabled selected>Select type</option>
@@ -279,11 +279,11 @@ function addFarmParcelDescription() {
                                         <label>Last Name</label>
                                         <input type="text" placeholder="eg. ">
                                     </div>
-                                    <div class="input-field width-half">
+                                    <div class="input-field width-full">
                                         <label>Extension Name</label>
                                         <input type="text" placeholder="eg. ">
                                     </div>
-                                    <div class="input-field width-half">
+                                    <div class="input-field width-full">
                                         <label>RSBSA Number</label>
                                         <input type="number" placeholder="eg. ">
                                     </div>

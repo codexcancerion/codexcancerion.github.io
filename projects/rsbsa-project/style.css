@@ -340,7 +340,7 @@ form .buttons button , .backBtn{
     width: 100% !important;    
 }
 .width-half {
-    width: 48% !important;    
+    width: calc(100% / 2 - 15px) !important;    
 }
 .required::after {
 	content: ' *';
