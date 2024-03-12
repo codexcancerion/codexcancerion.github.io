@@ -32,7 +32,7 @@ function toggleSpouseDetails() {
     var spouseDetails = document.getElementById("spouseDetails");
     var civilStatus = document.getElementById("civil-status");
 
-    if (civilStatus.value === "married") {
+    if (civilStatus.value === "Married") {
         spouseDetails.style.display = "block";
     } else {
         spouseDetails.style.display = "none";
@@ -61,10 +61,13 @@ function addAssociationField() {
     inputField.classList.add("input-field", "width-full");
 
     var label = document.createElement("label");
+    label.setAttribute("for", "fca_ia_org_name_" + numFields);
     label.textContent = numFields + 1;
 
     var input = document.createElement("input");
     input.setAttribute("type", "text");
+    input.setAttribute("id", `fca_ia_org_name_${numFields}`);
+    input.setAttribute("name", `fca_ia_org_name_${numFields}`);
     input.setAttribute("placeholder", "eg.");
 
     var removeButton = document.createElement("button");

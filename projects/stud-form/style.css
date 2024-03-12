@@ -1,40 +1,41 @@
 body {
     font-family: 'Open Sans', 'Segoe UI', sans-serif;
 	margin: 0;
-	background-image: url('https://kcp.edusuite.asia/img/login_bg.png') ;
+	/* background-image: url('https://kcp.edusuite.asia/img/login_bg.png') ; */
 	background-size: auto;
 	background-repeat: no-repeat;
 }
 
 
-.form-section {
+.container-section {
 	margin: 8vh;
 	display: flex;
 	justify-content: center;
 }
-.form-main {
+
+.main-container {
 	width: 60vw;
 	background-color: white;
 	padding: 20px;
 	border-radius: 5px;
 	box-shadow: 0 0 10px grey;
 }
-.form-title {
+.main-container .form-title {
 	text-align: left;
 }
-.form-main p {
+.main-container p {
 	margin: 0;
 }
-.form-main label {
+.main-container label {
 	color: #888;
 }
-.form-main .input-holder-wrapped {
+.main-container .input-holder-wrapped {
 	margin: 15px 0;
 	display: flex;
 	width: 100%;
 	flex-flow: row;
 }
-.form-main .input-holder-wrapped .input-holder {
+.main-container .input-holder-wrapped .input-holder {
 	padding: 1vh 0vw;
 	padding-right: 30px;
 	margin: 40px auto;
@@ -43,7 +44,7 @@ body {
 	margin-top: 10px;
 	border-radius: 5px;
 }
-.form-main .input-holder input, select{
+.main-container .input-holder input, select{
 	padding: 1vh;
 	width: 100% !important;
 	height: 30px;
@@ -53,16 +54,16 @@ body {
 	background-color: #f7f7f7;
 	transition: .1s;
 }
-.form-main .input-holder select{
+.main-container .input-holder select{
 	height: 44px !important;
 	width: 102% !important;
 	cursor: pointer;
 }
-.form-main .input-holder input:hover, select:hover{
+.main-container .input-holder input:hover, select:hover{
 	box-shadow: 0 0 10px rgb(200, 200, 200, 1.0);
 }
 
-.form-main .button-holder {
+.main-container .button-holder {
 	padding: 3vh 0vw;
 	padding-right: 1%;
 	margin: 20px auto;
@@ -72,7 +73,7 @@ body {
 	border-radius: 5px;
 	display: grid;
 }
-.form-main .button-holder button{
+.main-container .button-holder button{
 	padding: 15px;
 	width: 150px;
 	height: 50px;
@@ -85,19 +86,49 @@ body {
 	margin-left: auto;
 	align-self: end;
 }
-.form-main .button-holder button:hover{
+.main-container .button-holder button:hover{
 	background-color: #F71735;
 	color: white;
 	transition: .3s;
 	box-shadow: 0 0 10px grey;
 }
 
-
-
 .required::after {
 	content: ' *';
 	color: red;
 }
+
+
+
+
+
+/* TABLE SECTION */
+
+.table-section .main-container {
+	width: 90vw !important;
+}
+.table-section  table {
+	width: 80%;
+	margin: auto;
+	border-spacing: 0;
+	text-align: left;
+}
+.table-section th {
+	font-size: 14px;
+	padding: 10px;
+	border-bottom: 1px solid black;
+}
+.table-section td {
+	font-size: 12px;
+	padding: 10px;
+	border-bottom: 1px solid gray;
+	
+}
+
+
+
+
+/* OTHERS */
 
 .width-third {
 	width: 33% !important;

@@ -12,9 +12,9 @@
 	</header>
 
 	<main class="txt-sc-black">
-		<section class="form-section">
-			<form method="POST">
-				<div class="form-main">
+		<section class="container-section form-section">
+			<form method="POST" id="student-form">
+				<div class="main-container">
 					<h1 class="form-title">New Account Registration</h1>
 					<h3>Student's Information</h3>
 					<p>Please enter required field.</p>
@@ -46,9 +46,10 @@
 						<div class="input-holder width-half">						
 							<label for="gender" class="required">Gender</label><br>
 							<select name="gender" required>
+								<option selected disabled>Select here</option>
 								<option value="male">Male</option>							
 								<option value="female">Female</option>
-								<option value="nonbinary">Non-binary</option>
+								<option value="nonbinary">others</option>
 							</select>
 						</div>
 					</div>
@@ -61,7 +62,7 @@
 
 						<div class="input-holder width-half">
 							<label for="contact-number" class="required">Contact Number</label><br>
-							<input type="text" name="contact-number" id="contact-number" placeholder="eg. 09123456789" required>
+							<input type="number" name="contact-number" id="contact-number" placeholder="eg. 09123456789" required>
 						</div>
 					</div>
 					
@@ -70,6 +71,7 @@
 						<div class="width-full input-holder ">			
 							<label for="program" class="required">Program Applying for:</label><br>
 							<select name="program" required>
+								<option selected disabled>Select here</option>
 								<option value="AB THEO">Bachelor of Arts in Theology</option>
 								<option value="AT-NC II">Automotive Servicing NC II</option>
 								<option value="BA ENG">Bachelor of Arts in English Language</option>
@@ -106,6 +108,7 @@
 						<div class="input-holder width-half">				
 							<label for="term" class="required">Term Applying for:</label><br>
 							<select name="term" required>
+								<option selected disabled>Select here</option>
 								<option value="summer">SY 2023-2024 Summer Term</option>	
 								<option value="first-sem">SY 2024-2025 1st Semester</option>
 							</select>
@@ -114,6 +117,7 @@
 						<div class="input-holder width-half">				
 							<label for="student-status" class="required">Applying as:</label><br>
 							<select name="term" required>
+								<option selected disabled>Select here</option>
 								<option value="new-student">New Student</option>	
 								<option value="old-student">Old Student</option>
 								<option value="transferee">Transferee</option>
@@ -122,11 +126,48 @@
 					</div>
 
 					<div class="button-holder">
-						<button onclick="">Submit</button>
+						<button onclick="validateForm()">Submit</button>
 					</div>			
 					
 				</div>
 			</form>
+		</section>
+
+		<div class="button-holder">
+			<button onclick="saveToTable()">Submit</button>
+		</div>	
+
+
+		<section class="container-section table-section">
+			<div class="main-container">
+				<h2>Registered Students</h2>
+				<table id="studentsTable" class="data-table sortable">
+					<thead>
+						<tr>
+							<th scope="col">STUDENT ID</th>
+							<th scope="col">NAME</th>
+							<th scope="col">BIRTH DATE</th>
+							<th scope="col">GENDER</th>
+							<th scope="col">EMAIL</th>
+							<th scope="col">CONTACT NUMBER</th>
+							<th scope="col">COURSE</th>
+							<th scope="col">TERM</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2023-01-0162</td>
+							<td>Iverson Shog-oy</td>
+							<td>FEB 29, 2050</td>
+							<td>BAKLA</td>
+							<td>iver@gmail.com</td>
+							<td>09123456789</td>
+							<td>BSIT</td>
+							<td>1st Sem 2024-2025</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</section>
 	</main>
 
@@ -134,5 +175,7 @@
 	<footer>
 		
 	</footer>
+
+	<script src="script.js"></script>
 </body>
 </html>
