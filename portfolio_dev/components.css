@@ -1,47 +1,171 @@
+:root {
+    --dark-gray: #1a1a1a;
+    --deep-blue: #1f4068;
+    --light-blue: #8ae0fa;
+    --warm-yellowish-tone: #fddb92;
+    --soft-cyan: #d1fdff;
+}
+
 body {
     font-family: "Montserrat", Helvetica, sans-serif;
 }
-
 .montserrat-heading {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
 }
-
 nav {
     height: 5vh;
 }
 
-#home {
-    height: 90%;
-}
 
 .home {
-    height: 100%;
+    min-height: 95vh;
+    background: var(--dark-gray);
 }
-
-.my-into {
-    font-size: 8vh;
+.home .my-intro {
+    font-size: 10vh;
 }
-
-
-.profile-img {
+.home .my-intro-name {
+    /* background: linear-gradient(135deg, #e2e2e2, #4a9bfd); */
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.home .profile-img {
     border-radius: 100%;
     width: 250px !important;
 }
-
-
-.contact-info {
-	color: white;
-    padding: 50px 0;
+.home p {
+    color: #cccccc;
 }
 
-.message-me {
+
+
+.about-me-section {
+    background-image: url('https://standards.ieee.org/wp-content/uploads/2021/12/Connected-technologies-1920x1080-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.about-me-section .abouts {
+    background: rgba(0, 0, 0, .90) !important;
+    padding: 10vh 10vw;
+}
+.about-me-section .profile-container {
+    background: black !important;
+    padding: 10vh 5vw;
+}
+.about-me-section .profile-container .profile-card {
+    background: linear-gradient(150deg, #ffffff, #fff8d4, #c5dfff);
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    color: black;
+    border-radius: 20px;
+}
+.about-me-section .profile-container .profile-card table {
+    width: 100%;
+    border-spacing: 0;
+}
+.about-me-section .profile-container .profile-card table tr {
+    border-bottom: 1px grey solid;
+}
+.about-me-section .profile-container .profile-card table td,th{
+    padding: 10px 5px;
+    text-align: start;
+}
+.about-me-section .profile-container .profile-card .socmed-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vh;
+}
+.about-me-section .profile-container .profile-card i{
+    font-size: 24px;
+    padding: 0 10px;
+}
+
+
+
+
+.tools {
+    min-height: 100vh;
+    padding: 10vh 10vw;
+}
+.tools  .tool-row {
+    margin-top: 10vh;
+}
+.tools  .tool-row .tool-icons-holder {
+    display: flex;
+    justify-content: center;
+    padding: 5vh 0;
+}
+.tools  .tool-row .tool-icons-holder i{
+    font-size: 15vh;
+    padding: 0 20px
+}
+
+
+
+.works {
+    min-height: 100vh;
+    padding: 10vh 10vw;
+}
+.works  .work-items {
+    margin-top: 10vh;
+    padding: 5vh 10vw;
+}
+.works  .work-items col{
+    padding: 10vh 10% !important;
+}
+.works  .work-items .work-item-card {
+    color: black;
+    text-align: left;
+    padding: 25px 20px;
+    width: 100%;
+    max-width: 90%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #cccccc;  
+    transition: 300ms;  
+}
+.works  .work-items .work-item-card:hover {
+    box-shadow: 0 0 5px gray;
+}
+.works  .work-items a{
+    text-decoration: none;
+}
+.works  .tool-row .work-item-card i{
+    font-size: 15vh;
+    padding: 0 20px
+}
+
+
+
+.contact-me {
+    min-height: 100vh;
+}
+.contact-me .contact-info {
+	color: white;
+    padding: 10vh 5vw;
+}
+.contact-me .contact-info table {
+    width: 100%;
+    border-spacing: 0;
+}
+.contact-me .contact-info table tr {
+}
+.contact-me .contact-info table td,th{
+    padding: 10px;
+    text-align: start;
+}
+.contact-me .message-me {
 	height: 550px;	
 }
 
-.messaging {
+.contact-me .messaging {
 	border-radius: 20px;
     color: black;
 }
