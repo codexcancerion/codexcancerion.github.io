@@ -140,6 +140,15 @@ body {
 	border: 1px solid rgb(225, 225, 225, 1.0);
 	margin-top: 10px;
 	border-radius: 0 15px 15px 0;
+	background-color: #b9b9b9;
+}
+.table-section .section-header .search-container .search-bar-interction{
+	background-color: #13e258;
+	color: white;
+}
+.table-section .section-header .search-container .search-bar-no-interaction{
+	background-color: #b9b9b9;
+	color: black;
 }
 .table-section  table {
 	width: 100%;
@@ -188,7 +197,7 @@ body {
 	border: 0 !important;
 }
 button:hover{
-	background-color: #13e258;
+	background-color: #13e258 !important;
 	color: white;
 	transition: .3s;
 	box-shadow: 0 0 5px grey;

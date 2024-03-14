@@ -46,7 +46,7 @@
 						<div class="input-holder width-half">						
 							<label for="gender" class="required">Gender</label><br>
 							<select name="gender" required>
-								<option selected disabled>Select here</option>
+								<option selected disabled value="">Select here</option>
 								<option value="Male">Male</option>							
 								<option value="Female">Female</option>
 								<option value="Others">others</option>
@@ -71,7 +71,7 @@
 						<div class="width-full input-holder ">			
 							<label for="program" class="required">Program Applying for:</label><br>
 							<select name="program" required>
-								<option selected disabled>Select here</option>
+								<option selected disabled value="">Select here</option>
 								<option value="AB THEO">Bachelor of Arts in Theology</option>
 								<option value="AT-NC II">Automotive Servicing NC II</option>
 								<option value="BA ENG">Bachelor of Arts in English Language</option>
@@ -108,7 +108,7 @@
 						<div class="input-holder width-half">				
 							<label for="term" class="required">Term Applying for:</label><br>
 							<select name="term" required>
-								<option selected disabled>Select here</option>
+								<option selected disabled value="">Select here</option>
 								<option value="1">SY 2023-2024 Summer Term</option>	
 								<option value="0">SY 2024-2025 1st Semester</option>
 							</select>
@@ -117,7 +117,7 @@
 						<div class="input-holder width-half">				
 							<label for="student-status" class="required">Applying as:</label><br>
 							<select name="term" required>
-								<option selected disabled>Select here</option>
+								<option selected disabled value="">Select here</option>
 								<option value="New Student">New Student</option>	
 								<option value="Old Student">Old Student</option>
 								<option value="Transferee">Transferee</option>
@@ -142,8 +142,8 @@
 						<h2>Registered Students</h2>
 					</div>
 					<div class="search-container width-third">
-						<input type="search" placeholder="Search">
-						<button class="search-button">Search</button>
+						<input type="search" placeholder="Search" id="search-input">
+						<button class="search-button" id="search-button">Search</button>
 					</div>
 				</div>
 				<table id="studentsTable" class="data-table sortable">

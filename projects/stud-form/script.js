@@ -1,6 +1,4 @@
 var odd = 1;
-var oddClass = '<tr class="odd-row">'
-var evenClass = '<tr class="even-row">'
 
 function saveToTable() {
     // Retrieve form values
@@ -14,25 +12,24 @@ function saveToTable() {
     var contactNumber = document.getElementById('contact-number').value;
     var program = document.getElementsByName('program')[0].value;
     var term = document.getElementsByName('term')[0].value;
+    
+    // Check if student enrolls next term
     var enrollNextTerm;
-
     if(term==1) enrollNextTerm = "&#x2705; Yes";
     else enrollNextTerm = "&#10062; No";
-        
-    var checkOdd = () => {
-        if(odd==1) {
-            odd=2;
-            return oddClass;
-        }
-        else if(odd==2) {
-            odd=1;
-            return evenClass;
-        }
-        
-    }
 
+    // Adds table row depending on odd or even
+    var newRow;
+    if(odd==1) {
+        newRow = '<tr class="odd-row">';
+        odd=2;
+    }
+    else if(odd==2) {
+        newRow = '<tr class="even-row">';
+        odd=1;
+    } 
     // Create a new row for the table
-    var newRow = checkOdd+`
+    newRow += `
                     <td>${lname.toUpperCase()}, ${fname.toUpperCase()} ${mnameInitial.toUpperCase()}. </td>
                     <td>${gender.toUpperCase()}</td>
                     <td>${email}</td>
@@ -40,7 +37,7 @@ function saveToTable() {
                     <td>${enrollNextTerm}</td>
                 </tr>`;
 
-    // Append the new row to the table body
+    // Append the new row to the table body     
     document.getElementById('studentsTable').getElementsByTagName('tbody')[0].innerHTML += newRow;
 
     // Clear the form after submission
@@ -78,4 +75,13 @@ function saveTempData() {
 
     // Clear the form after submission
     document.getElementById('student-form').reset();
+}
+
+function searchBarInteracting(){
+    var searchButton = document.getElementById('search-button');
+    searchButton.classList.add('search-bar-interction');
+}
+function searchBarReleased(){
+    var searchButton = document.getElementById('search-button');
+    searchButton.classList.remove('search-bar-interction');
 }
