@@ -47,9 +47,9 @@
 							<label for="gender" class="required">Gender</label><br>
 							<select name="gender" required>
 								<option selected disabled>Select here</option>
-								<option value="male">Male</option>							
-								<option value="female">Female</option>
-								<option value="nonbinary">others</option>
+								<option value="Male">Male</option>							
+								<option value="Female">Female</option>
+								<option value="Others">others</option>
 							</select>
 						</div>
 					</div>
@@ -109,8 +109,8 @@
 							<label for="term" class="required">Term Applying for:</label><br>
 							<select name="term" required>
 								<option selected disabled>Select here</option>
-								<option value="summer">SY 2023-2024 Summer Term</option>	
-								<option value="first-sem">SY 2024-2025 1st Semester</option>
+								<option value="1">SY 2023-2024 Summer Term</option>	
+								<option value="0">SY 2024-2025 1st Semester</option>
 							</select>
 						</div>
 
@@ -118,55 +118,123 @@
 							<label for="student-status" class="required">Applying as:</label><br>
 							<select name="term" required>
 								<option selected disabled>Select here</option>
-								<option value="new-student">New Student</option>	
-								<option value="old-student">Old Student</option>
-								<option value="transferee">Transferee</option>
+								<option value="New Student">New Student</option>	
+								<option value="Old Student">Old Student</option>
+								<option value="Transferee">Transferee</option>
 							</select>
 						</div>
 					</div>
 
 					<div class="button-holder">
-						<button onclick="validateForm()">Submit</button>
+						<button onclick="saveToTable()">Submit</button>
 					</div>			
 					
 				</div>
 			</form>
 		</section>
 
-		<div class="button-holder">
-			<button onclick="saveToTable()">Submit</button>
-		</div>	
 
 
 		<section class="container-section table-section">
 			<div class="main-container">
-				<h2>Registered Students</h2>
+				<div class="section-header row">
+					<div class="header-container">
+						<h2>Registered Students</h2>
+					</div>
+					<div class="search-container width-third">
+						<input type="search" placeholder="Search">
+						<button class="search-button">Search</button>
+					</div>
+				</div>
 				<table id="studentsTable" class="data-table sortable">
 					<thead>
 						<tr>
-							<th scope="col">STUDENT ID</th>
 							<th scope="col">NAME</th>
-							<th scope="col">BIRTH DATE</th>
 							<th scope="col">GENDER</th>
 							<th scope="col">EMAIL</th>
-							<th scope="col">CONTACT NUMBER</th>
-							<th scope="col">COURSE</th>
-							<th scope="col">TERM</th>
+							<th scope="col">PROGRAM</th>
+							<th scope="col">WILL ENROLL NEXT TERM?</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>2023-01-0162</td>
-							<td>Iverson Shog-oy</td>
-							<td>FEB 29, 2050</td>
-							<td>BAKLA</td>
-							<td>iver@gmail.com</td>
-							<td>09123456789</td>
-							<td>BSIT</td>
-							<td>1st Sem 2024-2025</td>
+						<tr class="odd-row">
+							<td scope="col">ABAGGUE, PIA JANE B.</td>
+							<td scope="col">FEMALE</td>
+							<td scope="col">piajane@gmail.com</td>
+							<td scope="col">BSCRIM</td>
+							<td scope="col">✅ Yes</td>
+						</tr>
+						<tr class="even-row">
+							<td scope="col">ABANAG, JHERRIEL B. </td>
+							<td scope="col">MALE</td>
+							<td scope="col">abanag@gmail.com</td>
+							<td scope="col">BS PSYCH</td>
+							<td scope="col">✅ Yes</td>
+						</tr>
+						<tr class="odd-row">
+							<td scope="col">ABANCE, BRIGESTE G. </td>
+							<td scope="col">MALE</td>
+							<td scope="col">brigesteabance@gmail.com</td>
+							<td scope="col">BEED</td>
+							<td scope="col">✅ Yes</td>
+						</tr>
+						<tr class="even-row">
+							<td scope="col">ABANCE, APRIL MAE D. </td>
+							<td scope="col">FEMALE</td>
+							<td scope="col">aprilabance@gmail.com</td>
+							<td scope="col">BSCRIM</td>
+							<td scope="col">❎ No</td>
+						</tr>					
+						<tr class="odd-row">
+							<td>ABATEN, SHANAIA MEY B. </td>
+							<td>FEMALE</td>
+							<td>shanaiamey@gmail.com</td>
+							<td>BSCRIM</td>
+							<td>❎ No</td>
+						</tr>
+						<tr class="even-row">
+							<td>ABAYA, RAYMART JAYSON B. </td>
+							<td>MALE</td>
+							<td>raymartjayson@gmail.com</td>
+							<td>BSHM</td>
+							<td>✅ Yes</td>
+						</tr>
+						<tr class="odd-row">
+							<td>ABBEL, DEARLYN R. </td>
+							<td>FEMALE</td>
+							<td>dearlynabbel@gmail.com</td>
+							<td>BSED-ENGLISH</td>
+							<td>❎ No</td>
+						</tr>
+						<tr class="even-row">
+							<td>ABELLA, ANGELICA MAE J. </td>
+							<td>FEMALE</td>
+							<td>angelicamae@gmail.com</td>
+							<td>BSCRIM</td>
+							<td>❎ No</td>
+						</tr>
+						<tr class="odd-row">
+							<td>ABALLERA, EMREY M. </td>
+							<td>MALE</td>
+							<td>emreyaballera@gmail.com</td>
+							<td>BSCRIM</td>
+							<td>❎ No</td>
+						</tr>
+						<tr class="even-row">
+							<td>ABELLERA, KOBE SHANE B. </td>
+							<td>MALE</td>
+							<td>kobeshane@gmail.com</td>
+							<td>BSCRIM</td>
+							<td>❎ No</td>
 						</tr>
 					</tbody>
 				</table>
+
+				<div class="number-navigation">
+					<button class="current">1</button>
+					<button class="">2</button>
+					<button class="">3</button>
+				</div>
 			</div>
 		</section>
 	</main>

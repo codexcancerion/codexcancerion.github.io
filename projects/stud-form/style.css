@@ -87,11 +87,12 @@ body {
 	align-self: end;
 }
 .main-container .button-holder button:hover{
-	background-color: #F71735;
+	background-color: #13e258;
 	color: white;
 	transition: .3s;
 	box-shadow: 0 0 10px grey;
 }
+
 
 .required::after {
 	content: ' *';
@@ -103,33 +104,99 @@ body {
 
 
 /* TABLE SECTION */
-
 .table-section .main-container {
-	width: 90vw !important;
+	width: 60vw !important;
+	padding: 5vh 5vw;
+}
+.table-section .section-header {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	height: 10vh;
+}
+.table-section .section-header .header-container {
+	text-align: left;
+	width: 60%;
+}
+.table-section .section-header .search-container {
+	height: 100px;
+	width: 40% !important;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.table-section .section-header .search-container input{
+	padding: 1vh;
+	width: 60% !important;
+	height: 40px;
+	border: 1px solid rgb(225, 225, 225, 1.0);
+	margin-top: 10px;
+	border-radius: 15px 0 0 15px;
+	background-color: #f7f7f7;
+}
+.table-section .section-header .search-container .search-button{
+	width: 20% !important;
+	height: 40px;
+	border: 1px solid rgb(225, 225, 225, 1.0);
+	margin-top: 10px;
+	border-radius: 0 15px 15px 0;
 }
 .table-section  table {
-	width: 80%;
-	margin: auto;
+	width: 100%;
+	margin: 20px auto 30px auto;
 	border-spacing: 0;
 	text-align: left;
 }
 .table-section th {
 	font-size: 14px;
 	padding: 10px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid grey;
 }
 .table-section td {
 	font-size: 12px;
 	padding: 10px;
 	border-bottom: 1px solid gray;
-	
+}
+.table-section .odd-row {
+	background-color: white;
+}
+.table-section .even-row {
+	background-color: #c2d6c6;	
+}
+.table-section .main-container .number-navigation{
+	width: 100% !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.table-section .main-container .number-navigation button{
+	width: 30px !important;
+	height: 30px !important;
+	background-color: #cfcfcf;
+	border: 0;
+	margin: 0 10px;
+}
+.table-section .main-container .number-navigation button.current{
+	background-color: #13e258;
+}
+.table-section .main-container .number-navigation button:hover{
+	background-color: #13e258;
+	color: white;
+	transition: .3s;
+	box-shadow: 0 0 5px grey;
+	border: 0 !important;
+}
+button:hover{
+	background-color: #13e258;
+	color: white;
+	transition: .3s;
+	box-shadow: 0 0 5px grey;
+	border: 0 !important;
 }
 
 
-
-
 /* OTHERS */
-
 .width-third {
 	width: 33% !important;
 }
