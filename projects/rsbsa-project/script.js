@@ -41,10 +41,10 @@ function toggleSpouseDetails() {
 
 function toggleIccIpName() {
     var iccIpName = document.getElementById("icc-ip-name");
-    var yesRadio = document.getElementById("yes");
+    var yesRadio = document.getElementById("is_indigenous_people_yes");
 
     if (yesRadio.checked) {
-        iccIpName.style.display = "block";
+        iccIpName.style.display = "flex";
     } else {
         iccIpName.style.display = "none";
     }

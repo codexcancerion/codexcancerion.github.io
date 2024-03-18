@@ -321,20 +321,26 @@ form .buttons button , .backBtn{
     background-color: #aaa !important;
 }
 .input-with-remove button:hover {
-    background-color: #4070f4 !important;
+    background-color: #f31919 !important;
 }
-.form-holder .button-holder {
+.form-holder .button-holder, .farm-field-add-button-holder {
     display: flex;
     justify-content: end;
 }
-.form-holder .button-holder button {
-    
+.form-holder .button-holder button {    
     height: 40px !important;
     border-radius: 10px !important;
 }
-.form-holder .field-add-button {
+.form-holder .farm-field-add-button-holder .farm-field-add-button {
+    height: 60px !important;
+    border-radius: 10px !important;
+    width: 40% !important;
+    text-align: right;
+    color: #265df2;
 }
-
+.form-holder .farm-field-add-button-holder .farm-field-add-button:hover {
+    text-decoration: underline;
+}
 
 .width-full {
     width: 100% !important;    

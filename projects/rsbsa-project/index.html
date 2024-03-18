@@ -150,7 +150,7 @@
                     <div class="details personal">
                         <span class="title">CONTACT INFORMATION</span>                    
                         <div class="fields">
-                            <div class="input-field">
+                            <div class="input-field width-full">
                                 <label class="required" for="mobile_number">Mobile Number</label>
                                 <input type="number" placeholder="eg. 09123456789" id="mobile_number" name="mobile_number" required>
                             </div>
@@ -168,7 +168,6 @@
                         </div>
 
                         <div id="contact-additional-field" class="hidden-field">
-                            <label>If no, Full name and relationship with the owner of number:</label>
                             <div class="fields"> 
                                 <div class="input-field ">
                                     <label for="owner_name">Full Name</label>
@@ -276,11 +275,10 @@
                         </div>
                     
                         <div class="hidden-field" id="icc-ip-name" style="display: none;">
-                            <label>If yes, indicate name of ICC/IP:</label>
-                            <div class="fields"> 
+                            <div class="fields width-full"> 
                                 <div class="input-field width-full">
-                                    <label for="indigenous_people_name">Name of ICC/IP</label>
-                                    <input type="text" placeholder="eg. White Negrito" id="indigenous_people_name" name="indigenous_people_name">
+                                    <label for="indigenous_people_name required">Name of ICC/IP</label>
+                                    <input type="text" placeholder="eg. White Negrito" id="indigenous_people_name" name="indigenous_people_name" required>
                                 </div>
                             </div>
                         </div>
@@ -638,8 +636,8 @@
                 </div>
                 
                 
-                <div class="button-holder">
-                    <button class="field-add-button" type="button" onclick="addFarmParcelDescription()">Add Another Farm Parcel</button>
+                <div class="farm-field-add-button-holder">
+                    <p class="farm-field-add-button" type="button" onclick="addFarmParcelDescription()"><i class="uil uil-plus-circle" style="margin-right: 10px;"></i>Add Another Farm Parcel</p>
                 </div>
                 
                 <button class="nextBtn">
