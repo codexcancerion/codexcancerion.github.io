@@ -1,9 +1,7 @@
 body {
     font-family: 'Open Sans', 'Segoe UI', sans-serif;
 	margin: 0;
-	/* background-image: url('https://kcp.edusuite.asia/img/login_bg.png') ; */
-	background-size: auto;
-	background-repeat: no-repeat;
+	background-color: #eee;
 }
 
 
@@ -87,7 +85,7 @@ body {
 	align-self: end;
 }
 .main-container .button-holder button:hover{
-	background-color: #13e258;
+	background-color: #32cd32;
 	color: white;
 	transition: .3s;
 	box-shadow: 0 0 10px grey;
@@ -143,7 +141,7 @@ body {
 	background-color: #b9b9b9;
 }
 .table-section .section-header .search-container .search-bar-interction{
-	background-color: #13e258;
+	background-color: #32cd32;
 	color: white;
 }
 .table-section .section-header .search-container .search-bar-no-interaction{
@@ -187,17 +185,18 @@ body {
 	margin: 0 10px;
 }
 .table-section .main-container .number-navigation button.current{
-	background-color: #13e258;
+	background-color: #32cd32;
+	color: white;
 }
 .table-section .main-container .number-navigation button:hover{
-	background-color: #13e258;
+	background-color: #32cd32;
 	color: white;
 	transition: .3s;
 	box-shadow: 0 0 5px grey;
 	border: 0 !important;
 }
 button:hover{
-	background-color: #13e258 !important;
+	background-color: #32cd32 !important;
 	color: white;
 	transition: .3s;
 	box-shadow: 0 0 5px grey;

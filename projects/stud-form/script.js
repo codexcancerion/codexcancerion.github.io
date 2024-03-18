@@ -16,7 +16,7 @@ function saveToTable() {
     // Check if student enrolls next term
     var enrollNextTerm;
     if(term==1) enrollNextTerm = "&#x2705; Yes";
-    else enrollNextTerm = "&#10062; No";
+    else enrollNextTerm = "&#10060; No";
 
     // Adds table row depending on odd or even
     var newRow;
@@ -57,7 +57,7 @@ function saveTempData() {
     var enrollNextTerm;
 
     if(term==1) enrollNextTerm = "&#x2705; Yes";
-    else enrollNextTerm = "&#10062; No";
+    else enrollNextTerm = "&#10060; No";
         
 
     // Create a new row for the table
