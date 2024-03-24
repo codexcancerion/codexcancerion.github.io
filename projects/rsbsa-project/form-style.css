@@ -19,7 +19,7 @@ header .top-header {
     /* background-image: url('img/feet-bg.jpg');
     background-size: contain;
     background-repeat: no-repeat; */
-    background-position-y: 60%;
+    background-position-y: 40%;
     /* background-color: #248232; */
     padding: 5vh 5vw;
     display: flex;
@@ -57,13 +57,13 @@ header .top-header .img-portion img {
 
 
 main {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-top: 0;
 }
-.form-holder{
+.section-holder{
     /* position: ; */
     max-width: 900px;
     width: 90%;
@@ -73,9 +73,12 @@ main {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     height: fit-content;
 }
+.section-holder-within{
+    width: 100% !important;
+    box-shadow: none !important;
+}
 
-
-.form-holder .form-holder-header {
+.section-holder .section-holder-header {
     height: 100px;
     width: 100%;
     background-image: url('img/tactor.png');
@@ -86,22 +89,20 @@ main {
     display: flex;
     align-content: flex-end;
     flex-wrap: wrap;
-    padding: 0 20px;
 }
-.form-holder a {
+.section-holder a {
     
     text-decoration-line: none !important;
 }
-.form-holder h2{
+.section-holder h2{
     position: relative;
     font-size: 20px;
     font-weight: 600;
     color: #333;
     width: 100%;
-    font-weight: bolder;
-    
+    font-weight: bolder;    
 }
-.form-holder h2::before{
+.section-holder h2::before{
     content: "";
     position: absolute;
     left: 0;
@@ -113,7 +114,7 @@ main {
 }
 
 
-.form-holder form{
+.section-holder form{
     position: relative;
     margin-top: 16px;
     min-height: 490px;
@@ -121,12 +122,12 @@ main {
     overflow: hidden;
     padding: 10px 30px;
 }
-.form-holder form .form{
+.section-holder form .form{
     position: relative;
     background-color: #fff;
     transition: 0.3s ease;
 }
-.form-holder form .form.second{
+.section-holder form .form.second{
     opacity: 0;
     pointer-events: none;
     transform: translateX(100%);
@@ -143,16 +144,17 @@ form.secActive .form.first{
 }
 
 
-.form-holder form .title{
+.section-holder form .title{
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     margin: 6px 0;
     color: #333;
     position: relative;
+
 }
-.form-holder .details span.title::before{
+.section-holder .details span.title::before{
     content: "";
     position: absolute;
     left: 0;
@@ -165,7 +167,7 @@ form.secActive .form.first{
 }
 
 
-.form-holder form .fields{
+.section-holder form .fields{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -234,7 +236,7 @@ form .fields .check-field{
 }
 
 
-.form-holder form button, .backBtn{
+.section-holder form button, .backBtn{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,7 +252,7 @@ form .fields .check-field{
     transition: all 0.3s linear;
     cursor: pointer;
 }
-.form-holder form .btnText{
+.section-holder form .btnText{
     font-size: 14px;
     font-weight: 400;
 }
@@ -273,10 +275,10 @@ form .buttons button , .backBtn{
 }
 
 @media (max-width: 750px) {
-    .form-holder form{
+    .section-holder form{
         overflow-y: scroll;
     }
-    .form-holder form::-webkit-scrollbar{
+    .section-holder form::-webkit-scrollbar{
        display: none;
     }
     form .fields .input-field{
@@ -293,7 +295,7 @@ form .buttons button , .backBtn{
 
 
 
-.form-holder .hidden-field {
+.section-holder .hidden-field {
     display: none;
 }
 
@@ -323,22 +325,22 @@ form .buttons button , .backBtn{
 .input-with-remove button:hover {
     background-color: #f31919 !important;
 }
-.form-holder .button-holder, .farm-field-add-button-holder {
+.section-holder .button-holder, .farm-field-add-button-holder {
     display: flex;
     justify-content: end;
 }
-.form-holder .button-holder button {    
+.section-holder .button-holder button {    
     height: 40px !important;
     border-radius: 10px !important;
 }
-.form-holder .farm-field-add-button-holder .farm-field-add-button {
+.section-holder .farm-field-add-button-holder .farm-field-add-button {
     height: 60px !important;
     border-radius: 10px !important;
     width: 40% !important;
     text-align: right;
     color: #265df2;
 }
-.form-holder .farm-field-add-button-holder .farm-field-add-button:hover {
+.section-holder .farm-field-add-button-holder .farm-field-add-button:hover {
     text-decoration: underline;
 }
 
@@ -351,4 +353,18 @@ form .buttons button , .backBtn{
 .required::after {
 	content: ' *';
 	color: red;
+}
+
+
+
+
+.input-checker-holder {
+    width: 100%;
+    border: grey 1px solid;
+    display: flex;
+    padding: 20px
+}
+.input-checker-holder button {
+    justify-self: right !important;
+    height: 50px !important;
 }

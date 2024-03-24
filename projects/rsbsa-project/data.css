@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(to bottom, white, #D8F3D8, #FFFACD, #ADD8E6, #e9c0fa);
+}
+header .top-header {
+    width: 100%;
+    height: 60vh;
+    /* background-image: url('img/feet-bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat; */
+    background-position-y: 60%;
+    /* background-color: #248232; */
+    padding: 5vh 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+main {
+    margin-top: 15vh !important;
+}
+.section-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+
+.table-container {
+    width: 80%;
+    /* border-collapse: collapse; */
+    margin: 20px 0 !important;
+    border-spacing: 10px !important;
+    
+}
+.table-container th {
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-container td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+.table-container td.value {
+    font-weight: bold;
+}
+.table-container td.field {
+    width: 30%;
+    border: none !important;
+}
+
+.input-checker-holder {
+    margin-top: 20px;
+}
+
+
+.section-holder .data-title{
+    display: flex;
+    justify-self: left;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 50px;
+    color: #333;
+    position: relative;
+
+}
+.section-holder .data-title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 1px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #c4c4c4;
+
+}
+
