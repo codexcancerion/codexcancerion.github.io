@@ -1,41 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-body{
-    min-height: 100vh;
-    background: linear-gradient(to bottom, white, #D8F3D8, #FFFACD, #ADD8E6, #e9c0fa);
-}
-header .top-header {
-    width: 100%;
-    height: 60vh;
-    /* background-image: url('img/feet-bg.jpg');
-    background-size: contain;
-    background-repeat: no-repeat; */
-    background-position-y: 60%;
-    /* background-color: #248232; */
-    padding: 5vh 5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-main {
-    margin-top: 15vh !important;
-}
-.section-holder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px;
-}
 
 
 .table-container {

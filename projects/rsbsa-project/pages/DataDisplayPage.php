@@ -13,9 +13,6 @@
     $land_owner_rsbsa_number  = $cropping_schedule_start  = $cropping_schedule_end  = $commodity_crop  = $size_planted_area  = $number_of_heads_trees  = "";
     $farm_type  = $is_organic_farming  = $rotational_tiller_full_name  = $rotational_tiller_rsba_number  = "";
 
-
-
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
         // Assign values from form fields
@@ -57,7 +54,6 @@
         $identity_document_type = $_POST["identity_document_type"];
         $identity_document_number = $_POST["identity_document_number"];
     
-    
         $livelihood = $_POST["livelihood"];
     
         $location_barangay = $_POST["location_barangay"];
@@ -91,19 +87,66 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="data.css">
-        <link rel="stylesheet" href="form-style.css">
+        <link rel="stylesheet" href="DataDisplayPage.css">
+        <link rel="stylesheet" href="RegistrationPage.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+            .section-holder{
+                border-radius: 10px;
+                margin: 0 !important;
+                background-color: #fff;
+                box-shadow: none  !important;
+                height: fit-content;
+                top: 20px;
+                padding: 2vh 5vw;
+            }
+            .section-holder .section-holder-header {
+                height: 100px;
+                width: 100%;
+                background-image: url("img/tactor.png");
+                background-size: 100px;
+                background-repeat: no-repeat;
+                background-position-x: 90%;
+                background-position-y: 70%;
+                display: flex;
+                align-content: flex-end;
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+            }
+            @media only screen and (max-width: 600px) {
+                .side-panel {
+                    height: 20vh;
+                    background: white;
+                    border-radius: 10px;
+                    top: 0;
+                    padding: 20px;
+                    position: relative;
+                    margin-bottom: 40px;
+                }
+                .side-panel .parts {
+                    visibility: hidden !important;
+                }
+                .section-holder{
+                    padding: 20px !important;
+                    top: 0;
+                }
+                .section-holder form{
+                    padding: 0 !important;
+                }
+            }
+        </style>
     </head>
     <body>';
-    echo "<main class='main'>";
-        echo "<div class='section-holder'>
+    echo "<main class='row justify-content-center'>";
+    echo renderSidePanel();
+        echo "<div class='section-holder col-lg-8 mx-4' id='part1'>
             <div class='section-holder-header'>
                 <h2>FARMER INFORMATION</h2>
             </div> 
             ";
 
         // PART I
-        echo '<span class="data-title">Part I: Personal Information</span>  ';        
+        echo '<span class="data-title" id="part1">Part I: Personal Information</span>  ';        
         echo "<table class='table-container'>";
             // echo "<tr><th>Field</th><th>Value</th></tr>";
             echo "<tr><td class='field'>First Name</td><td class='value'>" . $first_name . "</td></tr>";
@@ -142,14 +185,14 @@
         echo "</table>";
 
         // PART II 
-        echo '<span class="data-title">Part II: Livelihood Information</span>  ';        
+        echo '<span class="data-title" id="part2">Part II: Livelihood Information</span>  ';        
         echo "<table class='table-container'>";
             echo "<tr><td class='field'>Livelihood</td><td class='value'>" . $livelihood . "</td></tr>";
         echo "</table>";
 
 
         // PART III
-        echo '<span class="data-title">Part III: Farm Parcel Information</span>  ';        
+        echo '<span class="data-title" id="part3">Part III: Farm Parcel Information</span>  ';        
         echo "<table class='table-container'>";
             echo "<tr><td class='field'>Location Barangay</td><td class='value'>" . $location_barangay . "</td></tr>";
             echo "<tr><td class='field'>Location City/Municipality</td><td class='value'>" . $location_city_municipality . "</td></tr>";
@@ -173,10 +216,23 @@
             echo "<tr><td class='field'>Rotational Tiller Full Name</td><td class='value'>" . $rotational_tiller_full_name . "</td></tr>";
             echo "<tr><td class='field'>Rotational Tiller RSBSA Number</td><td class='value'>" . $rotational_tiller_rsba_number . "</td></tr>";
         echo "</table>";
-
         echo "</div>";
         echo "</main>";
     echo "</body>";
     echo "</html>";
 
+
+function renderSidePanel(){
+    return '
+        <div class="side-panel col-lg-3 mx-4 p-4">
+            <div class="side-header">
+                <h3 class="title-gradient">RSBSA Farmer Enrollment Form</h3>
+            </div>
+            <a href="#part1"><div class="parts">Part I. Personal Information</div></a>
+            <a href="#part2"><div class="parts">Part II. Livelihood Information</div></a>
+            <a href="#part3"><div class="parts">Part III. Farm Parcel Information</div></a>
+            <a href="#part4"><div class="parts">Part IV. Consent Declaration</div></a>
+        </div>
+    ';
+}
 ?>

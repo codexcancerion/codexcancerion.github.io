@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,87 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
+    <!-- <link rel="stylesheet" href="pages/HomePage.css"> -->
      
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        *{
+
+        body{            
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
-        }
-        body{
             min-height: 100vh;
             /* background: linear-gradient(to bottom, white, #ADD8E6, #e9c0fa); */
             overflow-x: hidden;
         }
         header {
         }
-        header .row {
-            /* width: 100%; */
+        header .main-holder {
+            width: 100vw;
             height: 100vh;
-            padding: 5vh 5vw;
-            justify-content: center;
-            align-items: center;
-        }
-        .title-gradient {
-            background: linear-gradient(to right, #4CAF50, #87CEEB);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 50px;
-            margin-top: 0;
-            font-weight: 900;
-            text-align: left;
-        }
-
-        
-        button{
             display: flex;
+            justify-content:center;
             align-items: center;
-            justify-content: center;
-            height: 50px;
-            max-width: 250px;
-            width: 100%;
-            border: none;
-            outline: none;
-            color: #fff;
-            border-radius: 5px;
-            margin: 50px 0;
-            background-color: #4070f4;
-            transition: all 0.3s linear;
-            cursor: pointer;
-            padding: 20px;
+            flex-direction: column;
         }
-        button{
-            font-size: 14px;
-            font-weight: 400;
-        }
-        button:hover{
-            background-color: #265df2;
-        }
-        a {
-            text-decoration: none;
-        }
+            .title-portion {
+                /* width: 100%; */
+                padding: 0 10vw;
+            }
+                .title-gradient {
+                    background: linear-gradient(to right, #4CAF50, #87CEEB);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 50px;
+                    margin-top: 0;
+                    font-weight: 900;
+                    text-align: center;
+                }
+
+            .buttons-portion {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-direction: row;
+            }
+                button{
+                    height: 60px;
+                    min-width: 250px;
+                    text-align: center;
+                    font-weight: bold;
+                    border: none;
+                    outline: none;
+                    color: #fff;
+                    border-radius: 10px;
+                    margin: 50px 0;
+                    background-color: #4070f4;
+                    transition: all 0.3s linear;
+                    cursor: pointer;
+                    padding: 20px;
+                    font-size: 14px;
+                }
+                button:hover{
+                    background-color: #265df2;
+                }
+                a {
+                    text-decoration: none;
+                }
     </style>
 
-   <title>Responsive Regisration Form </title>
+   <title>RSBSA Home </title>
 </head>
 <body>
     <header>
-        <div class="row">
-            <div class="col-8">
+        <div class="main-holder">
+            <div class="title-portion">
                 <h1 class="title-gradient">RSBSA<br>Registry System for Basic Sectors in Agriculture</h1>            
             </div>
-            <div class="col-4">
-                    <a href="form.html">
-                        <button class="button">Farmer Enrollment Form</button>
+            <div class="buttons-portion">
+                    <a href="pages/RegistrationPage.html">
+                        <button class="button active">Farmer Enrollment Form</button>
                     </a>
-                    <a href="form.html">
-                        <button class="button"></button>
+                    <a href="pages/TestPage.html">
+                        <button class="button">Test Page</button>
                     </a>
                     <a href="form.html">
                         <button class="button"></button>
@@ -101,6 +104,5 @@
 
     </main>
     
-    <script src="script.js"></script>
 </body>
 </html>
