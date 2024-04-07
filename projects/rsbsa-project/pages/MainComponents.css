@@ -1,0 +1,17 @@
+
+
+
+nav {
+    height: 10vh;
+    background: white;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+}
+    nav .nav-logo a {
+        text-decoration: none;
+    }
+    nav .nav-logo h3 {
+        color: #333;
+        font-weight: bold;
+    }

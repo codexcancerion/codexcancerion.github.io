@@ -356,6 +356,12 @@ form .buttons button , .backBtn{
 .width-half {
     width: calc(100% / 2 - 15px) !important;    
 }
+@media only screen and (max-width: 600px) {
+    .width-half {
+        width: 100% !important;    
+    }
+}
+
 .required::after {
 	content: ' *';
 	color: red;

@@ -7,10 +7,15 @@
     
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="RegistrationPage.css">
+    <link rel="stylesheet" href="MainComponents.css">
      
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <script src="RegistrationFormComponents.js"></script>
+    <script src="MainComponents.js"></script>
+    
     <style>
         .section-holder{
             border-radius: 10px;
@@ -60,7 +65,11 @@
 </head>
 <body>
     <header>
-        
+        <div class="navbar-holder" id="navbar-holder">
+            <script>
+                renderNavbar("navbar-holder");
+            </script>
+        </div>
     </header>
 
     <main class="row justify-content-center">
@@ -74,9 +83,9 @@
             <a href="#part4"><div class="parts">Part IV. Consent Declaration</div></a>
         </div>
 
-        <div class="section-holder col-lg-8 mx-4" id="part1">
+        <div class="section-holder col-lg-8 mx-4" id="">
             <form action="DataDisplayPage.php" method="POST">                
-                <div >
+                <div id="part1">
                     <a href="#part1">
                         <div class="section-holder-header"  id="">
                             <h2>PART I: PERSONAL INFORMATION</h2>
@@ -84,344 +93,309 @@
                     </a>
 
                     <div class="form first">
-                        <div class="details personal">
-                            <span class="title">FARMER NAME</span>                    
-                            <div class="fields">
-                                <div class="input-field">
-                                    <label class="required" for="first_name">First Name</label>
-                                    <input type="text" id="first_name" name="first_name" placeholder="eg. Job" required>
-                                </div>
-                                <div class="input-field">
-                                    <label class="required" for="middle_name">Middle Name</label>
-                                    <input type="text" id="middle_name" name="middle_name" placeholder="eg. Pong" required>
-                                </div>
-                                <div class="input-field">
-                                    <label class="required" for="last_name">Last Name</label>
-                                    <input type="text" id="last_name" name="last_name" placeholder="eg. Dady" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="extension_name">Extension Name</label>
-                                    <input type="text" id="extension_name" name="extension_name" placeholder="eg. Jr.">
+                        <div id="part-1-unit-1">
+                            <div class="details">
+                                <span class="title">FARMER NAME</span>                    
+                                <div class="fields" id="farmer-name-field">
+                                    <script>
+                                        renderTextInputField("farmer-name-field", "First Name", "first_name", "eg. John", "width-third", "text", true);
+                                        renderTextInputField("farmer-name-field", "Middle Name", "middle_name", "eg. De la", "width-third", "text", true);
+                                        renderTextInputField("farmer-name-field", "Last Name", "last_name", "eg. Cruz", "width-third", "text", true);
+                                        renderTextInputField("farmer-name-field", "Extention Name", "extension_name", "eg. Jr.", "width-third", "text", false);
+                                    </script>
                                 </div>
                             </div>
-                        </div>
-                        <br>
+                            <br>
 
-
-                        <div class="details personal">
-                            <span class="title">SEX</span>  
-                            <div class="fields">
-                                <div class="input-field width-full">
-                                    <label class="required" for="sex">Sex</label>
-                                    <select required  name="sex" id="sex">
-                                        <option disabled selected>Select sex</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                    </select>
-                                </div>
-                            </div> 
-                        </div>
-                        <br>
-
-
-                        <div class="details address">
-                            <span class="title">PERMANENT ADDRESS</span>                    
-                            <div class="fields">
-                                <div class="input-field">
-                                    <label class="" for="address_house_no">House/Lot/Bldg. no./Purok</label>
-                                    <input type="text" placeholder="eg. 123" id="address_house_no" name="address_house_no">
-                                </div>
-                                <div class="input-field">
-                                    <label class="" for="address_street">Street/Sitio/Subdvision</label>
-                                    <input type="text" placeholder="eg. Kalye St." id="address_street" name="address_street">
-                                </div>
-                                <div class="input-field">
-                                    <label class="required" for="address_barangay">Barangay</label>
-                                    <input type="text" placeholder="eg. Sesame" name="address_barangay" id="address_barangay" required>
-                                </div>
-                                <div class="input-field">
-                                    <label class="required" for="address_city_municipality">City/Municipality</label>
-                                    <input type="text" placeholder="eg. Baguio City" name="address_city_municipality" id="address_city_municipality" required>
-                                </div>
-                                <div class="input-field">
-                                    <label class="required" for="address_province">Province</label>
-                                    <input type="text" placeholder="eg. Benguet" id="address_province" name="address_province" required>
-                                </div>
-                                <div class="input-field">
-                                    <label class="required" for="address_region">Region</label>
-                                    <select id="address_region" name="address_region" required>
-                                        <option value="" disabled selected>Select Region</option>
-                                        <option value="Ilocos Region">Ilocos Region</option>
-                                        <option value="Cordillera Administrative Region">Cordillera Administrative Region</option>
-                                        <option value="Cagayan Valley">Cagayan Valley</option>
-                                        <option value="Central Luzon">Central Luzon</option>
-                                        <option value="Calabarzon">Calabarzon</option>
-                                        <option value="Mimaropa">Mimaropa</option>
-                                        <option value="Bicol Region">Bicol Region</option>
-                                        <option value="Western Visayas">Western Visayas</option>
-                                        <option value="Central Visayas">Central Visayas</option>
-                                        <option value="Eastern Visayas">Eastern Visayas</option>
-                                        <option value="Zamboanga Peninsula">Zamboanga Peninsula</option>
-                                        <option value="Northern Mindanao">Northern Mindanao</option>
-                                        <option value="Davao Region">Davao Region</option>
-                                        <option value="Soccsksargen">Soccsksargen</option>
-                                        <option value="Caraga">Caraga</option>
-                                        <option value="Bangsamoro Autonomous Region in Muslim Mindanao">Bangsamoro Autonomous Region in Muslim Mindanao</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-
-
-                        <div class="details personal">
-                            <span class="title">BIRTH INFORMATION</span>                    
-                            <div class="fields">
-                                <div class="input-field width-full">
-                                    <label class="required" for="birth_date">Date of birth</label>
-                                    <input type="date" placeholder="" id="birth_date" name="birth_date" required>
-                                </div>
-                            </div>
-                            
-                            <label>Place of Birth</label>
-                            <div class="fields">              
-                                <div class="input-field width-full">
-                                    <label class="required" for="birth_place_city">City/Municipality</label>
-                                    <input type="text" placeholder="eg. Baguio City" id="birth_place_city" name="birth_place_city" required>
-                                </div>
-                                <div class="input-field width-full">
-                                    <label class="required" for="birth_place_province">Province</label>
-                                    <input type="text" placeholder="eg. Benguet" id="birth_place_province" name="birth_place_province" required>
-                                </div>
-                            </div>
-                            
-                            <label>Mother's Maiden Name</label>
-                            <div class="fields">                                
-                                <div class="input-field">
-                                    <label class="required" for="mother_first_name">First Name</label>
-                                    <input type="text" placeholder="eg. Job" id="mother_first_name" name="mother_first_name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label class="required" for="mother_middle_name">Middle Name</label>
-                                    <input type="text" placeholder="eg. Pong" id="mother_middle_name" name="mother_middle_name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label class="required" for="mother_last_name">Last Name</label>
-                                    <input type="text" placeholder="eg. Dady" id="mother_last_name" name="mother_last_name" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="mother_extension_name">Extension Name</label>
-                                    <input type="text" placeholder="eg. Jr." id="mother_extension_name" name="mother_extension_name">
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-
-                        <div class="details personal">
-                            <span class="title">CONTACT INFORMATION</span>                    
-                            <div class="fields">
-                                <div class="input-field width-full">
-                                    <label class="required" for="mobile_number">Mobile Number</label>
-                                    <input type="number" placeholder="eg. 09123456789" id="mobile_number" name="mobile_number" required>
-                                </div>
-                            </div>
-
-                            <div class="fields">
-                                <div class="">
-                                    <span>Do you own the mobile number?</span><br>
-                                    <input type="radio" id="contact-yes" name="contact-owned" value="contact-yes" onclick="toggleContactAdditionalField()">
-                                    <label for="contact-yes">Yes</label>
-                                    <br>
-                                    <input type="radio" id="contact-no" name="contact-owned" value="contact-no" onclick="toggleContactAdditionalField()">
-                                    <label for="contact-no">No</label>
-                                </div>                           
-                            </div>
-
-                            <div id="contact-additional-field" class="hidden-field">
-                                <div class="fields"> 
-                                    <div class="input-field ">
-                                        <label for="owner_name">Full Name</label>
-                                        <input type="text" placeholder="eg. Kuya Job" id="owner_name" name="owner_name">
-                                    </div>
-                                    <div class="input-field ">
-                                        <label for="owner_relationship">Relationship</label>
-                                        <input type="text" placeholder="eg. Brother" id="owner_relationship" name="owner_relationship">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <br>
-
-                        <div class="details personal">
-                            <span class="title">EDUCATION</span>   
-                            <div class="fields">
-                                <div class="input-field width-full">   
-                                    <label for="education" class="required">Highest Educational Attainment</label>                        
-                                    <select required id="education" name="education">
-                                        <option disabled selected>Select highest educational attainment</option>
-                                        <option value="Pre-school">Pre-school</option>
-                                        <option value="Elementary">Elementary</option>
-                                        <option value="High School (non K-12)">High School (non K-12)</option>
-                                        <option value="Junior High School (K-12)">Junior High School (K-12)</option>
-                                        <option value="Senior High School (K-12)">Senior High School (K-12)</option>
-                                        <option value="College">College</option>
-                                        <option value="Post-graduate">Post-graduate</option>
-                                        <option value="Vocational">Vocational</option>
-                                        <option value="None">None</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-
-                        <div class="details personal">
-                            <span class="title">CIVIL STATUS</span>                    
-                            <div class="fields">
-                                <div class="input-field width-full">                                
-                                    <label for="civil_status" class="required">Civil Status</label>
-                                    <select id="civil-status" name="civil_status" onchange="toggleSpouseDetails()">
-                                        <option value="" disabled selected>Select civil status</option>
-                                        <option value="Single">Single</option>
-                                        <option value="Married">Married</option>
-                                        <option value="Widow">Widow/er</option>
-                                        <option value="Separated">Legally Separated</option>
-                                    </select>
-                                </div>
-                            </div>
-                        
-                            <div class="hidden-field" id="spouseDetails">
-                                <label class="">Name of spouse:</label>                    
+                            <div class="details">
+                                <span class="title">SEX</span>  
                                 <div class="fields">
-                                    <div class="input-field">
-                                        <label for="spouse_first_name">First Name</label>
-                                        <input type="text" placeholder="eg. " id="spouse_first_name" name="spouse_first_name">
+                                    <div class="input-field width-full">
+                                        <label class="required" for="sex">Sex</label>
+                                        <select required  name="sex" id="sex">
+                                            <option disabled selected>Select sex</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
                                     </div>
-                                    <div class="input-field">
-                                        <label for="spouse_middle_name">Middle Name</label>
-                                        <input type="text" placeholder="eg. " id="spouse_middle_name" name="spouse_middle_name">
-                                    </div>
-                                    <div class="input-field">
-                                        <label for="spouse_last_name">Last Name</label>
-                                        <input type="text" placeholder="eg. " id="spouse_last_name" name="spouse_last_name">
-                                    </div>
-                                    <div class="input-field">
-                                        <label for="spouse_extension_name">Extension Name</label>
-                                        <input type="text" placeholder="eg. " id="spouse_extension_name" name="spouse_extension_name">
-                                    </div>
-                                    <div class="input-field">
-                                        <label for="spouse_rsbsa_number">RSBSA Number</label>
-                                        <input type="number" placeholder="eg. "  id="spouse_rsbsa_number" name="spouse_rsbsa_number">
-                                    </div>
-                                </div>
-                            </div>                        
-                        </div>                    
-                        <br>
-
-
-                        <div class="details personal">
-                            <span class="title">RELIGION</span>   
-                            <div class="fields">
-                                <div class="input-field width-full">   
-                                    <label for="religion" class="required">Religion</label>                        
-                                    <input type="text" placeholder="eg. Roman Catholic" id="religion" name="religion" required>
-                                </div>
+                                </div> 
                             </div>
+                            <br>
+
+                            <!-- RENDER NEXT BUTTON -->
+                            <script>
+                                renderNextButton('part-1-unit-1', 'part-1-unit-2');
+                            </script>
                         </div>
-                        <br>
-
-
-                        <div class="details personal">
-                            <span class="title">INDIGENOUS COMMUNITY INFORMATION</span>  
-                            <div class="fields">
-                                <div class="">
-                                    <span>Part of Indigenous Cultural Community (ICC / Indigenous Peoples (IP))?</span><br>
-                                    <input type="radio" id="is_indigenous_people_yes" name="is_indigenous_people" value="Yes" onchange="toggleIccIpName()">
-                                    <label for="is_indigenous_people_yes">Yes</label>
-                                    <br>
-                                    <input type="radio" id="is_indigenous_people_no" name="is_indigenous_people" value="No" onchange="toggleIccIpName()">
-                                    <label for="is_indigenous_people_no">No</label>
-                                </div>                           
-                            </div>
                         
-                            <div class="hidden-field" id="icc-ip-name" style="display: none;">
-                                <div class="fields width-full"> 
-                                    <div class="input-field width-full">
-                                        <label for="indigenous_people_name required">Name of ICC/IP</label>
-                                        <input type="text" placeholder="eg. White Negrito" id="indigenous_people_name" name="indigenous_people_name" required>
+
+                        <div class="hidden-field" id="part-1-unit-2">
+                            <div class="details">
+                                <span class="title">PERMANENT ADDRESS</ADdress></span>                    
+                                <div class="fields" id="permanent-address-field">
+                                    <script>
+                                        renderTextInputField("permanent-address-field", "House/Lot/Bldg. no./Purok", "address_house_no", "eg. 123", "width-third", "text", false);
+                                        renderTextInputField("permanent-address-field", "Street/Sitio/Subdvision", "address_street", "eg. Kalye St.", "width-third", "text", false);
+                                        renderTextInputField("permanent-address-field", "Barangay", "address_barangay", "eg. Sesame", "width-third", "text", true);
+                                        renderTextInputField("permanent-address-field", "City/Municipality", "address_city_municipality", "eg. Baguio City", "width-third", "text", true);
+                                        renderTextInputField("permanent-address-field", "City/Municipality", "address_province", "eg. Benguet", "width-third", "text", true);
+                                    </script>
+                                    <div class="input-field">
+                                        <label class="required" for="address_region">Region</label>
+                                        <select id="address_region" name="address_region" required>
+                                            <option disabled selected>Select Region</option>
+                                            <option value="Ilocos Region">Ilocos Region</option>
+                                            <option value="Cordillera Administrative Region">Cordillera Administrative Region</option>
+                                            <option value="Cagayan Valley">Cagayan Valley</option>
+                                            <option value="Central Luzon">Central Luzon</option>
+                                            <option value="Calabarzon">Calabarzon</option>
+                                            <option value="Mimaropa">Mimaropa</option>
+                                            <option value="Bicol Region">Bicol Region</option>
+                                            <option value="Western Visayas">Western Visayas</option>
+                                            <option value="Central Visayas">Central Visayas</option>
+                                            <option value="Eastern Visayas">Eastern Visayas</option>
+                                            <option value="Zamboanga Peninsula">Zamboanga Peninsula</option>
+                                            <option value="Northern Mindanao">Northern Mindanao</option>
+                                            <option value="Davao Region">Davao Region</option>
+                                            <option value="Soccsksargen">Soccsksargen</option>
+                                            <option value="Caraga">Caraga</option>
+                                            <option value="Bangsamoro Autonomous Region in Muslim Mindanao">Bangsamoro Autonomous Region in Muslim Mindanao</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                        </div>        
-                        <br>
+                            <br>
 
-
-                        <div class="details personal">
-                            <span class="title">DISABILITY INFORMATION</span>  
-                            <div class="fields">
-                                <div class="">
-                                    <span>Are you a Person With Disability (PWD)?</span><br>
-                                    <input type="radio" id="is_person_with_disability_yes" name="is_person_with_disability" value="Yes">
-                                    <label for="is_person_with_disability_yes">Yes</label>
-                                    <br>
-                                    <input type="radio" id="is_person_with_disability_no" name="is_person_with_disability" value="No">
-                                    <label for="is_person_with_disability_no">No</label>
-                                </div>                           
-                            </div>
+                            <!-- RENDER NEXT BUTTON -->
+                            <script>
+                                renderNextButton('part-1-unit-2', 'part-1-unit-3');
+                            </script>
                         </div>
-                        <br>
 
+                        <div class="hidden-field" id="part-1-unit-3">
+                            <div class="details personal">
+                                <span class="title">BIRTH INFORMATION</span>                    
+                                <div class="fields">
+                                    <div class="input-field width-full">
+                                        <label class="required" for="birth_date">Date of birth</label>
+                                        <input type="date" placeholder="" id="birth_date" name="birth_date" required>
+                                    </div>
+                                </div>
 
-                        <div class="details personal">
-                            <span class="title">4Ps BENEFICIARY</span>  
-                            <div class="fields">
-                                <div class="">
-                                    <span>Are you a 4Ps Beneficiary (DSWD Pantawid Pamilyang Pilipino Program)?</span><br>
-                                    <input type="radio" id="is_4ps_beneficiary_yes" name="is_4ps_beneficiary" value="Yes">
-                                    <label for="is_4ps_beneficiary_yes">Yes</label>
-                                    <br>
-                                    <input type="radio" id="is_4ps_beneficiary_no" name="is_4ps_beneficiary" value="No">
-                                    <label for="is_4ps_beneficiary_no">No</label>
-                                </div>                           
+                                
+                                <label>Place of Birth</label>
+                                <div class="fields" id="birth_place-field">
+                                    <script>
+                                        renderTextInputField("birth_place-field", "City/Municipality", "birth_place_city", "eg. Baguio City", "width-half", "text", true);
+                                        renderTextInputField("birth_place-field", "Province", "birth_place_province", "eg. Benguet", "width-half", "text", true);
+                                    </script>
+                                </div>
+
+                                <label>Mother's Maiden Name</label>
+                                <div class="fields" id="mother-name-field">
+                                    <script>
+                                        renderTextInputField("mother-name-field", "First Name", "mother_first_name", "eg. John", "width-third", "text", true);
+                                        renderTextInputField("mother-name-field", "Middle Name", "mother_middle_name", "eg. De la", "width-third", "text", true);
+                                        renderTextInputField("mother-name-field", "Last Name", "mother_last_name", "eg. Cruz", "width-third", "text", true);
+                                    </script>
+                                </div>
                             </div>
-                        </div>
-                        <br>
+                            <br>
 
+                            <!-- RENDER NEXT BUTTON -->
+                            <script>
+                                renderNextButton('part-1-unit-3', 'part-1-unit-4');
+                            </script>
+                        </div>  
 
-                        <div class="details personal">
-                            <span class="title">MEMBERSHIP IN FARMER'S or IRRIGATORS ASSOCIATION/COOPERATIVE/ORGANIZATION</span>  
-                            <label for="fca_ia_org_name">Indicate names of FCA/IA/Organization:</label>
-                            <div id="association-fields">
-                                <div class="fields"> 
-                                    <div class="input-field width-full">
-                                        <label>1</label>
-                                        <div class="input-with-remove width-full">
-                                            <input type="text" placeholder="eg." id="fca_ia_org_name_1" name="fca_ia_org_name_1">
-                                        </div>
-                                    </div>
-                                    <div class="input-field width-full">
-                                        <label>2</label>
-                                        <div class="input-with-remove width-full">
-                                            <input type="text" placeholder="eg." id="fca_ia_org_name_2" name="fca_ia_org_name_2">
-                                        </div>
-                                    </div>
-                                    <div class="input-field width-full">
-                                        <label>3</label>
-                                        <div class="input-with-remove width-full">
-                                            <input type="text" placeholder="eg." id="fca_ia_org_name_3" name="fca_ia_org_name_3">
-                                        </div>
+                        
+                        <div class="hidden-field" id="part-1-unit-4">
+                            <div class="details personal">
+                                <span class="title">CONTACT INFORMATION</span>                    
+                                <div class="fields" id="mobile-number-field">
+                                    <script>
+                                        renderTextInputField("mobile-number-field", "Moblie Number", "mobile_number", "eg. 09123456789", "width-half", "number", true);
+                                    </script>
+                                </div>
+
+                                <div class="fields">
+                                    <div class="">
+                                        <span>Do you own the mobile number?</span><br>
+                                        <input type="radio" id="contact-yes" name="contact-owned" value="contact-yes" onclick="toggleContactAdditionalField()">
+                                        <label for="contact-yes">Yes</label>
+                                        <br>
+                                        <input type="radio" id="contact-no" name="contact-owned" value="contact-no" onclick="toggleContactAdditionalField()">
+                                        <label for="contact-no">No</label>
+                                    </div>                           
+                                </div>
+
+                                <div class="hidden-field" id="contact-additional-field">
+                                    <span>Enter information of the number owner</span><br>
+                                    <div class="fields" id="contact-owner-field"> 
+                                        <script>
+                                            renderTextInputField("contact-owner-field", "Full Name", "owner_name", "eg. Kuya Job", "width-half", "text", true);
+                                            renderTextInputField("contact-owner-field", "Relationship", "owner_relationship", "eg. Brother", "width-half", "text", true);
+                                        </script>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="button-holder">
-                                <button class="field-add-button" type="button" onclick="addAssociationField()">Add Field</button>
-                            </div> -->
-                        </div>                                        
-                        <br>
+                            <br>
 
-                        <div class="details ID">
+                            <div class="details personal">
+                                <span class="title">CIVIL STATUS</span>                    
+                                <div class="fields">
+                                    <div class="input-field width-full">                                
+                                        <label for="civil_status" class="required">Civil Status</label>
+                                        <select id="civil-status" name="civil_status" onchange="toggleSpouseDetails()">
+                                            <option value="" disabled selected>Select civil status</option>
+                                            <option value="Single">Single</option>
+                                            <option value="Married">Married</option>
+                                            <option value="Widow">Widow/er</option>
+                                            <option value="Separated">Legally Separated</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            
+                                <div class="hidden-field" id="spouseDetails">
+                                    <label class="">Name of spouse:</label>
+                                    <div class="fields" id="spouse-name-field">
+                                        <script>
+                                            renderTextInputField("spouse-name-field", "First Name", "spouse_first_name", "eg. John", "width-third", "text", false);
+                                            renderTextInputField("spouse-name-field", "Middle Name", "spouse_middle_name", "eg. De la", "width-third", "text", false);
+                                            renderTextInputField("spouse-name-field", "Last Name", "spouse_last_name", "eg. Cruz", "width-third", "text", false);
+                                            renderTextInputField("spouse-name-field", "RSBSA Number", "spouse_rsbsa_number", "", "width-full", "number", false);
+                                        </script>
+                                    </div>    
+                                </div>                        
+                            </div>                    
+                            <br>
+
+                            <!-- RENDER NEXT BUTTON -->
+                            <script>
+                                renderNextButton('part-1-unit-4', 'part-1-unit-5');
+                            </script>
+                        </div>
+                        
+
+                        <div class="hidden-field" id="part-1-unit-5">
+                            <div class="details personal">
+                                <span class="title">EDUCATION</span>   
+                                <div class="fields">
+                                    <div class="input-field width-full">   
+                                        <label for="education" class="required">Highest Educational Attainment</label>                        
+                                        <select required id="education" name="education">
+                                            <option disabled selected>Select highest educational attainment</option>
+                                            <option value="Pre-school">Pre-school</option>
+                                            <option value="Elementary">Elementary</option>
+                                            <option value="High School (non K-12)">High School (non K-12)</option>
+                                            <option value="Junior High School (K-12)">Junior High School (K-12)</option>
+                                            <option value="Senior High School (K-12)">Senior High School (K-12)</option>
+                                            <option value="College">College</option>
+                                            <option value="Post-graduate">Post-graduate</option>
+                                            <option value="Vocational">Vocational</option>
+                                            <option value="None">None</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>                        
+
+                            <div class="details personal">
+                                <span class="title">RELIGION</span>   
+                                <div class="fields">
+                                    <div class="input-field width-full">   
+                                        <label for="religion" class="required">Religion</label>                        
+                                        <input type="text" placeholder="eg. Roman Catholic" id="religion" name="religion" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="details personal">
+                                <span class="title">INDIGENOUS COMMUNITY INFORMATION</span>  
+                                <div class="fields">
+                                    <div class="">
+                                        <span>Part of Indigenous Cultural Community (ICC / Indigenous Peoples (IP))?</span><br>
+                                        <input type="radio" id="is_indigenous_people_yes" name="is_indigenous_people" value="Yes" onchange="toggleIccIpName()">
+                                        <label for="is_indigenous_people_yes">Yes</label>
+                                        <br>
+                                        <input type="radio" id="is_indigenous_people_no" name="is_indigenous_people" value="No" onchange="toggleIccIpName()">
+                                        <label for="is_indigenous_people_no">No</label>
+                                    </div>                           
+                                </div>
+                            
+                                <div class="hidden-field" id="icc-ip-name" style="display: none;">
+                                    <div class="fields width-full"> 
+                                        <div class="input-field width-full">
+                                            <label for="indigenous_people_name required">Name of ICC/IP</label>
+                                            <input type="text" placeholder="eg. White Negrito" id="indigenous_people_name" name="indigenous_people_name" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>        
+                            <br>
+
+                            <div class="details personal">
+                                <span class="title">DISABILITY INFORMATION</span>  
+                                <div class="fields">
+                                    <div class="">
+                                        <span>Are you a Person With Disability (PWD)?</span><br>
+                                        <input type="radio" id="is_person_with_disability_yes" name="is_person_with_disability" value="Yes">
+                                        <label for="is_person_with_disability_yes">Yes</label>
+                                        <br>
+                                        <input type="radio" id="is_person_with_disability_no" name="is_person_with_disability" value="No">
+                                        <label for="is_person_with_disability_no">No</label>
+                                    </div>                           
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="details personal">
+                                <span class="title">4Ps BENEFICIARY</span>  
+                                <div class="fields">
+                                    <div class="">
+                                        <span>Are you a 4Ps Beneficiary (DSWD Pantawid Pamilyang Pilipino Program)?</span><br>
+                                        <input type="radio" id="is_4ps_beneficiary_yes" name="is_4ps_beneficiary" value="Yes">
+                                        <label for="is_4ps_beneficiary_yes">Yes</label>
+                                        <br>
+                                        <input type="radio" id="is_4ps_beneficiary_no" name="is_4ps_beneficiary" value="No">
+                                        <label for="is_4ps_beneficiary_no">No</label>
+                                    </div>                           
+                                </div>
+                            </div>
+                            <br>
+
+                            <!-- RENDER NEXT BUTTON -->
+                            <script>
+                                renderNextButton('part-1-unit-5', 'part-1-unit-6');
+                            </script>
+                        </div>
+
+                        
+                        <div class="hidden-field" id="part-1-unit-6">
+                            <div class="details personal">
+                                <span class="title">MEMBERSHIP IN FARMER'S or IRRIGATORS ASSOCIATION/COOPERATIVE/ORGANIZATION</span>  
+                                <label for="fca_ia_org_name">Indicate names of FCA/IA/Organization:</label>                  
+                                <div class="fields" id="association-fields">
+                                    <script>
+                                        renderTextInputField("association-fields", "1", "fca_ia_org_name_1", "", "width-full", "text", false);
+                                        renderTextInputField("association-fields", "2", "fca_ia_org_name_2", "", "width-full", "text", false);
+                                        renderTextInputField("association-fields", "3", "fca_ia_org_name_3", "", "width-full", "text", false);
+                                    </script>
+                                </div>
+                            </div>                                        
+                            <br>
+
+                            <!-- RENDER NEXT BUTTON -->
+                            <script>
+                                renderNextButton('part-1-unit-6', 'part-1-unit-7');
+                            </script>
+                        </div>
+                            
+                        
+                        <div class="hidden-field" id="part-1-unit-7">
+                            <div class="details ID">
                             <span class="title">PROOF OF IDENTITY</span>
-
                             <div class="fields">
                                 <div class="input-field width-full">
                                     <label class="required" for="identity_document_type">ID Type</label>
@@ -463,19 +437,23 @@
                                 <i class="uil uil-navigator"></i>
                             </button>
                             </a> -->
-                        </div>  
+                            </div>  
+
+                            <!-- RENDER NEXT BUTTON -->
+                            <script>
+                                renderNextButton('part-1-unit-7', 'part2');
+                            </script>
+                        </div>
                     </div>
                 </div>
-                
 
-
-
-                <div class="" id="part2">
+                <div class="hidden-field" id="part2">
                     <div class="section-holder-header"  >
                         <h2>PART II: LIVELIHOOD PROFILE</h2>
                     </div>            
         
-                        <div class="form first">                    
+                        <div class="form first">   
+                                             
                             <div class="details personal">
                                 <span class="title">LIVELIHOOD PROFILE</span>  
                                 <div class="fields">
@@ -496,18 +474,16 @@
                             </div>
                             <br>
         
-                                <!-- <button class="nextBtn">
-                                    <span class="btnText">Next</span>
-                                    <i class="uil uil-navigator"></i>
-                                </button> -->
+                            <script>
+                                renderNextButton('part2', 'part3');
+                            </script>
                         </div>
                 </div>
     
-    
-    
-    
-                <div class="">
-                    <div class="section-holder-header" id="part3">
+
+
+                <div class="hidden-field" id="part3">
+                    <div class="section-holder-header">
                         <h2>PART III: FARM PARCEL INFORMATION</h2>
                     </div>            
         
@@ -516,29 +492,20 @@
                                 <span class="title">FARM PARCEL DESCRIPTION</span> <br>                   
                                 
                                 <label for="">Farm Location</label>
-                                <div id="farm-location-fields">
-                                    <div class="fields"> 
-                                        <div class="input-field">
-                                            <label class="required" for="location_barangay">Barangay</label>
-                                            <input type="text" placeholder="eg. Pico" id="location_barangay" name="location_barangay" required>
-                                        </div>
-                                        <div class="input-field">
-                                            <label class="required" for="location_city_municipality">Municipality</label>
-                                            <input type="text" placeholder="eg. La Trinidad" id="location_city_municipality" name="location_city_municipality" required>
-                                        </div>
-                                        <div class="input-field">
-                                            <label class="required" for="location_province">Province</label>
-                                            <input type="text" placeholder="eg. Benguet" id="location_province" name="location_province" required>
-                                        </div>
-                                    </div>
+                                <div class="fields" id="farm-location-fields">
+                                    <script>
+                                        renderTextInputField("farm-location-fields", "Barangay", "location_barangay", "eg. Sesame", "width-third", "text", true);
+                                        renderTextInputField("farm-location-fields", "Municipality", "location_city_municipality", "eg. La Trinidad", "width-third", "text", true);
+                                        renderTextInputField("farm-location-fields", "Province", "location_province", "eg. Benguet", "width-third", "text", true);
+                                    </script>
                                 </div>
                             
-                                <div class="fields">
-                                    <div class="input-field width-full">
-                                        <label class="required" for="total_area_hectares">Total Parcel Area</label>
-                                        <input type="text" placeholder="eg. " id="total_area_hectares" name="total_area_hectares" required>
-                                    </div>
+                                <div class="fields" id="farm-total-area-fields">
+                                    <script>
+                                        renderTextInputField("farm-total-area-fields", "Total Parcel Area", "total_area_hectares", "", "width-full", "number", true);
+                                    </script>
                                 </div>
+                                <br>
                             
                                 <div class="fields">
                                     <div class="">
@@ -558,6 +525,7 @@
                                         <label for="is_agrarian_reform_beneficiary_no">No</label>
                                     </div>                       
                                 </div>
+                                <br>
                             
                                 <div class="fields">
                                     <div class="input-field width-full">
@@ -591,62 +559,38 @@
                                         </select>
                                     </div>
                                 </div>
+                                <br>
                             
                                 <label class="">Name of Land Owner:</label>                    
-                                <div id="land-owner-fields">
-                                    <div class="fields">
-                                        <div class="input-field">
-                                            <label for="land_owner_first_name">First Name</label>
-                                            <input type="text" placeholder="eg. " id="land_owner_first_name" name="land_owner_first_name">
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="land_owner_middle_name">Middle Name</label>
-                                            <input type="text" placeholder="eg. " id="land_owner_middle_name" name="land_owner_middle_name">
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="land_owner_last_name">Last Name</label>
-                                            <input type="text" placeholder="eg. " id="land_owner_last_name" name="land_owner_last_name">
-                                        </div>
-                                        <div class="input-field width-full">
-                                            <label for="land_owner_extension_name">Extension Name</label>
-                                            <input type="text" placeholder="eg. " id="land_owner_extension_name" name="land_owner_extension_name">
-                                        </div>
-                                        <div class="input-field width-full">
-                                            <label for="land_owner_rsbsa_number">RSBSA Number</label>
-                                            <input type="number" placeholder="eg. " id="land_owner_rsbsa_number" name="land_owner_rsbsa_number">
-                                        </div>
-                                    </div>
+                                <div class="fields" id="land-owner-fields">
+                                    <script>
+                                        renderTextInputField("land-owner-fields", "First Name", "land_owner_first_name", "eg. John", "width-third", "text", false);
+                                        renderTextInputField("land-owner-fields", "Middle Name", "land_owner_middle_name", "eg. De la", "width-third", "text", false);
+                                        renderTextInputField("land-owner-fields", "Last Name", "land_owner_last_name", "eg. Cruz", "width-third", "text", false);
+                                        renderTextInputField("land-owner-fields", "Extention Name", "land_owner_extension_name", "eg. Jr.", "width-half", "text", false);
+                                        renderTextInputField("land-owner-fields", "RSBSA Number", "land_owner_rsbsa_number", "", "width-half", "number", false);
+                                    </script>
                                 </div>
+                                <br>
         
                                 <div class="details personal">
                                     <span class="title">CROP INFORMATION</span> <br>
             
-                                    <label class="">Cropping Schedule</label>   
-                                    <div class="fields">
-                                        <div class="input-field width-full">   
-                                            <label for="cropping_schedule_start" class="required">Planting Month</label>                        
-                                            <input type="text" placeholder="eg. March" id="cropping_schedule_start" name="cropping_schedule_start" required>
-                                        </div>
-                                        <div class="input-field width-full">   
-                                            <label for="cropping_schedule_end" class="required">Estimated Harvesting Month</label>                        
-                                            <input type="text" placeholder="eg. June" id="cropping_schedule_end" name="cropping_schedule_end" required>
-                                        </div>
+                                    <label class="">Cropping Schedule</label>                                                          
+                                    <div class="fields" id="cropping_schedule-fields">
+                                        <script>
+                                            renderTextInputField("cropping_schedule-fields", "Planting Month", "cropping_schedule_start", "eg. March", "width-half", "text", true);
+                                            renderTextInputField("cropping_schedule-fields", "Estimated Harvesting Month", "cropping_schedule_end", "eg. June", "width-half", "text", true);
+                                        </script>
                                     </div>
             
-                                    <label class="">Commodity/Crop</label>   
-                                    <div class="fields">
-                                        <div class="input-field ">   
-                                            <label for="commodity_crop" class="required">Crop Name</label>                        
-                                            <input type="text" placeholder="eg. Cabbage" id="commodity_crop" name="commodity_crop" required>
-                                        </div>
-                                        <div class="input-field ">   
-                                            <label for="size_planted_area" class="">Size/Planted Area (HA)</label>                        
-                                            <input type="text" placeholder="eg. " id="size_planted_area" name="size_planted_area" >
-                                        </div>
-                                        <div class="input-field ">   
-                                            <label for="number_of_heads_trees" class="">Number of Heads/Trees</label>                        
-                                            <input type="text" placeholder="eg. " id="number_of_heads_trees" name="number_of_heads_trees" >
-                                        </div>
+                                    <label class="">Commodity/Crop</label> 
+                                    <div class="fields" id="commodity_crop-fields">
+                                        <script>
+                                            renderTextInputField("commodity_crop-fields", "Crop Name", "commodity_crop", "eg. Cabbage", "width-third", "text", true);
+                                            renderTextInputField("commodity_crop-fields", "Size/Planted Area (HA)", "size_planted_area", "", "width-third", "text", false);
+                                            renderTextInputField("commodity_crop-fields", "Number of Heads/Trees", "number_of_heads_trees", "", "width-third", "text", false);
+                                        </script>
                                     </div>
             
                                     <label class="">Farm Type</label>   
@@ -681,17 +625,15 @@
                                         <span class="title">ROTATIONAL TILLER</span> 
             
                                         <label class="">Name of Rotational Tiller:</label>                    
-                                        <div class="fields">
-                                            <div class="input-field width-full">
-                                                <label for="rotational_tiller_full_name ">Full Name</label>
-                                                <input type="text" placeholder="eg. " id="rotational_tiller_full_name" name="rotational_tiller_full_name">
-                                            </div>
-                                            <div class="input-field width-full">
-                                                <label for="rotational_tiller_rsba_number">RSBSA Number</label>
-                                                <input type="number" placeholder="eg. " id="rotational_tiller_rsba_number"  name="rotational_tiller_rsba_number">
-                                            </div>
+                                        <div class="fields" id="rotational_tiller-fields">
+                                            <script>
+                                                renderTextInputField("rotational_tiller-fields", "Full Name", "rotational_tiller_full_name", "eg. John", "width-half", "text", false);
+                                                renderTextInputField("rotational_tiller-fields", "RSBSA Number", "rotational_tiller_rsba_number", "", "width-half", "number", false);
+                                            </script>
                                         </div>
+                                        <br>
                                     </div>
+
                                 </div>
                                 <div class="button-holder input-with-remove">
                                     <button class="" type="button" onclick="removeField(this)">Remove</button>
@@ -701,86 +643,81 @@
                                 </div>
                             </div>   
                         </div>
-                        
-                        
                         <!-- <div class="farm-field-add-button-holder">
                             <p class="farm-field-add-button" type="button" onclick="addFarmParcelDescription()"><i class="uil uil-plus-circle" style="margin-right: 10px;"></i>Add Another Farm Parcel</p>
                         </div> -->
                         
-                        <!-- <button class="nextBtn">
-                            <span class="btnText">Next</span>
-                            <i class="uil uil-navigator"></i>
-                        </button> -->
+                        
+                        <script>
+                            renderNextButton('part3', 'part4');
+                        </script>
                 </div>
-        
-    
-    
-    
-            
-                <div class="">
-                    <div class="section-holder-header" id="part4">
-                        <h2>PART IV: CONSENT DECLARATION AND DATA PRIVACY POLICY</h2>
-                    </div>            
-        
-                        <div class="form first">                    
-                            <div class="details personal"> 
-                                <div class="fields">
-                                    <div class="check-field">
-                                        <input required type="checkbox" id="agree-1" name="consent" value="agree">
-                                        <label for="agree-1" class="required">I hereby declare that all information indicated in this form are true, correct and complete, and that they may be used by the Department of Agriculture for the purposes of registration to the RSBSA and other legitimate interests of the Department pursuant to its mandates.</label>
-                                        <br>
-                                        <input required type="checkbox" id="agree-2" name="consent" value="agree">
-                                        <label for="agree-2" class="required">I am fully aware that I can be held liable for any misdeclaration or intentional omission made herein pursuant to applicable laws and regulations.</label>
-                                        <br>                                
-                                        <input required type="checkbox" id="agree-3" name="consent" value="agree">
-                                        <label for="agree-3" class="required">Furthermore, I hereby give consent to the Department of Agriculture to conduct validation activities on my declared farm parcels through the RSBSA Georeferencing Activity.</label>
-                                    </div>                           
+                
+                <div class="hidden-field" id="part4">
+                        <div class="">
+                            <div class="section-holder-header" id="">
+                                <h2>PART IV: CONSENT DECLARATION AND DATA PRIVACY POLICY</h2>
+                            </div>            
+                
+                                <div class="form first">                    
+                                    <div class="details personal"> 
+                                        <div class="fields">
+                                            <div class="check-field">
+                                                <input required type="checkbox" id="agree-1" name="consent" value="agree">
+                                                <label for="agree-1" class="required">I hereby declare that all information indicated in this form are true, correct and complete, and that they may be used by the Department of Agriculture for the purposes of registration to the RSBSA and other legitimate interests of the Department pursuant to its mandates.</label>
+                                                <br>
+                                                <input required type="checkbox" id="agree-2" name="consent" value="agree">
+                                                <label for="agree-2" class="required">I am fully aware that I can be held liable for any misdeclaration or intentional omission made herein pursuant to applicable laws and regulations.</label>
+                                                <br>                                
+                                                <input required type="checkbox" id="agree-3" name="consent" value="agree">
+                                                <label for="agree-3" class="required">Furthermore, I hereby give consent to the Department of Agriculture to conduct validation activities on my declared farm parcels through the RSBSA Georeferencing Activity.</label>
+                                            </div>                           
+                                        </div>
+                                    </div>
+                                    <br>
+                
+                                        <button class="nextBtn" type="submit">
+                                            <span class="btnText">Submit</span>
+                                            <i class="uil uil-navigator"></i>
+                                        </button>
                                 </div>
-                            </div>
-                            <br>
-        
-                                <button class="nextBtn" type="submit">
-                                    <span class="btnText">Submit</span>
-                                    <i class="uil uil-navigator"></i>
-                                </button>
                         </div>
                 </div>
+        
+    
             </form>
         </div>
     </main>
     
+    <script src="script.js"></script>
+    <script src="RegistrationFormComponents.js"></script>
     <script>
-        function toggleContactAdditionalField() {
-            let additionalField = document.getElementById("contact-additional-field");    
-            var notOwned = document.querySelector('input[name="contact-owned"][value="contact-no"]');
-            if (notOwned.checked) {
-                additionalField.style.display = "block";
-            } else {
-                additionalField.style.display = "none";
+        function renderNextUnit(targetIdOfNext){
+            let formParts = ['part1', 'part2', 'part3', 'part4'];
+            var formUnits = ['part-1-unit-1', 
+            'part-1-unit-2', 
+            'part-1-unit-3',
+            'part-1-unit-4',
+            'part-1-unit-5',
+            'part-1-unit-6',
+            'part-1-unit-7'];
+            
+            if(formUnits.includes(targetIdOfNext)){
+                formUnits.forEach(element => {
+                    let target = document.getElementById(element);
+                    target.style.display = "none";
+                });
             }
-        }
-
-        function toggleSpouseDetails() {
-            var spouseDetails = document.getElementById("spouseDetails");
-            var civilStatus = document.getElementById("civil-status");
-
-            if (civilStatus.value === "Married") {
-                spouseDetails.style.display = "block";
-            } else {
-                spouseDetails.style.display = "none";
+            else if(formParts.includes(targetIdOfNext)){
+                formParts.forEach(element => {
+                    let target = document.getElementById(element);
+                    target.style.display = "none";
+                });
             }
-        }
-
-        function toggleIccIpName() {
-            var iccIpName = document.getElementById("icc-ip-name");
-            var yesRadio = document.getElementById("is_indigenous_people_yes");
-
-            if (yesRadio.checked) {
-                iccIpName.style.display = "flex";
-            } else {
-                iccIpName.style.display = "none";
-            }
-        }
+            
+            var nextTarget = document.getElementById(targetIdOfNext);
+            nextTarget.style.display = "block";
+        } 
     </script>
 </body>
 </html>

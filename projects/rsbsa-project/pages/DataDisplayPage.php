@@ -89,7 +89,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="DataDisplayPage.css">
         <link rel="stylesheet" href="RegistrationPage.css">
+        <link rel="stylesheet" href="MainComponents.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        
+        <script src="RegistrationFormComponents.js"></script>
+        <script src="MainComponents.js"></script>
+        
         <style>
             .section-holder{
                 border-radius: 10px;
@@ -136,7 +141,15 @@
             }
         </style>
     </head>
-    <body>';
+    <body>
+        <header>
+            <div class="navbar-holder" id="navbar-holder">
+                <script>
+                    renderNavbar("navbar-holder");
+                </script>
+            </div>
+        </header>
+    ';
     echo "<main class='row justify-content-center'>";
     echo renderSidePanel();
         echo "<div class='section-holder col-lg-8 mx-4' id='part1'>

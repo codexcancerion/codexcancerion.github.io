@@ -1,35 +1,45 @@
-function renderPageFirst(){
-    let frist = '
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            
-            <!----======== CSS ======== -->
-            <link rel="stylesheet" href="RegistrationPage.css">
-            
-            <!----===== Iconscout CSS ===== -->
-            <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-            <style>
-                .section-holder .section-holder-header {
-                    height: 100px;
-                    width: 100%;
-                    background-image: url('img/tactor.png');
-                    background-size: 100px;
-                    background-repeat: no-repeat;
-                    background-position-x: 90%;
-                    background-position-y: 70%;
-                    display: flex;
-                    align-content: flex-end;
-                    flex-wrap: wrap;
-                    margin-bottom: 20px;
-                }
-            </style>
-        <title>Responsive Regisration Form </title>
-        </head>
-        <body></body>
-    ';
+function renderTextInputField(targetTagId, label, id, placeholder, widthClass, inputType, required) {
+    let targetField = document.getElementById(targetTagId);
+    
+    let newField = document.createElement("div");
+    newField.classList.add("input-field");
+    newField.classList.add(widthClass);
+
+    let newLabel = document.createElement("label");
+    newLabel.setAttribute("for", id);
+    newLabel.textContent = label;
+
+    let newInput = document.createElement("input");
+    newInput.setAttribute("id", id);
+    newInput.setAttribute("name", id);
+    newInput.setAttribute("type", inputType);
+    newInput.setAttribute("placeholder", placeholder);
+
+    if (required) {
+        newLabel.classList.add("required");
+        newInput.attributes.required = "required";
+    }
+    
+    targetField.appendChild(newField);
+    newField.appendChild(newLabel);
+    newField.appendChild(newInput);
+}
+
+
+function renderNextButton(currentUnit, nextTargetId) {
+    // <button class="nextBtn" onclick="renderNextUnit('part-1-unit-2')" type="button">
+    //     <span class="btnText">Next</span>
+    //     <i class="uil uil-navigator"></i>
+    // </button>
+    let targetField = document.getElementById(currentUnit);
+    
+    let newButton = document.createElement("button");
+    newButton.setAttribute('type', 'button');
+    newButton.setAttribute('onclick', 'renderNextUnit("' +nextTargetId+ '")');
+    newButton.innerHTML = `
+        <span class="btnText">Next</span>
+        <i class="uil uil-navigator"></i>
+    `;
+
+    targetField.appendChild(newButton);
 }
