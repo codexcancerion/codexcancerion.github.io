@@ -3,6 +3,11 @@ body {
 	overflow-x: hidden;
 }
 
+
+.navbar {
+	height: 10vh;
+	position: -webkit-sticky;
+}
 .gx-icon {
 	height: 40px;
 }
@@ -15,7 +20,7 @@ body {
 
 
 .full-height {
-	height: 100vh; /* Set height to 100% of the viewport height */
+	height: 90vh; /* Set height to 100% of the viewport height */
 }
 .gx-title {
 	width: 60%;
